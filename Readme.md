@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Бычков](https://up.htmlacademy.ru/adaptive/18/user/1073979).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Клюхина](https://htmlacademy.ru/profile/id125399).
 
 ---
 
