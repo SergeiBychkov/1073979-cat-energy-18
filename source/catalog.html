@@ -7,21 +7,21 @@
 <body>
 <header class="header">
   <a class="header__logo-image" href="#">
-    <img src="img/logo-mobile.svg.png" width="33" height="38" alt="логотип">
+    <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
   </a>
   <a class="header__logo-text" href="#">
-    <img src="img/logo-mobile-header.svg.png" width="101" height="18" alt="Кэт энерджи">
+    <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
   </a>
   <nav class="navigation">
     <button type="button">
       <span class="visually-hidden">открыть меню</span>
     </button>
     <ul class="navigation__list site-list">
-      <li class="site-list__item site-list__item--active">
-        <a href="#">главная</a>
-      </li>
       <li class="site-list__item">
-        <a href="catalog.html">каталог продукции</a>
+        <a href="index.html">главная</a>
+      </li>
+      <li class="site-list__item site-list__item--active">
+        <a href="#">каталог продукции</a>
       </li>
       <li class="site-list__item">
         <a href="form.html">подбор программы</a>
@@ -34,7 +34,7 @@
   <h1 class="visually-hidden">здоровое питание для вашего питомца</h1>
   <section class="product-catalog">
     <h2>Каталог продукции</h2>
-      <div class="product-card product-description">
+      <div class="product-card product-catalog__item">
         <h3>CAT ENERGY PRO 500 Г</h3>
         <p>Объём</p>
         <p>500 г</p>
@@ -42,9 +42,9 @@
         <p> Курица</p>
         <p>Цена</p>
         <p>700 Р.</p>
-        <button class="btn order-button" type="button">заказать</button>
+        <button class="btn product-card__btn" type="button">заказать</button>
       </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY PRO 1000 Г</h3>
       <p>Объём</p>
       <p>1000 г</p>
@@ -52,9 +52,9 @@
       <p> Курица</p>
       <p>Цена</p>
       <p>1000 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
       </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY PRO 500 Г</h3>
       <p>Объём</p>
       <p>500 г</p>
@@ -62,9 +62,9 @@
       <p>Рыба</p>
       <p>Цена</p>
       <p>700 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
     </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY PRO 1000 Г</h3>
       <p>Объём</p>
       <p>1000 г</p>
@@ -72,9 +72,9 @@
       <p>Рыба</p>
       <p>Цена</p>
       <p>1000 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
     </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY SLIM 500 Г</h3>
       <p>Объём</p>
       <p>500 г</p>
@@ -82,9 +82,9 @@
       <p>Гречка</p>
       <p>Цена</p>
       <p>400 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
     </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY SLIM 1000 Г</h3>
       <p>Объём</p>
       <p>1000 г</p>
@@ -92,9 +92,9 @@
       <p>Гречка</p>
       <p>Цена</p>
       <p>700 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
     </div>
-    <div class="product-card product-description">
+    <div class="product-card product-catalog__item">
       <h3>CAT ENERGY SLIM 500 Г</h3>
       <p>Объём</p>
       <p>500 г</p>
@@ -102,41 +102,41 @@
       <p>Рис</p>
       <p>Цена</p>
       <p>500 Р.</p>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-card show-more">
       <p class="show-more__text">показать еще 100500 товаров</p>
       <p class="show-more__text">на самом деле вкусов гораздо больше!</p>
-      <button class="btn more-button" type="button">показать все</button>
+      <button class="btn show-more__btn" type="button">показать все</button>
     </div>
   </section>
   <section class="additional-catalog">
     <h2 class="visually-hidden">дополнительные товары</h2>
-    <div class="additional-catalog__item additional-product">
+    <div class="additional-product additional-catalog__item">
       <h3>сахарозаменитель</h3>
       <span>1 упаковка (100 г)</span>
       <span>200 Р.</span>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
-    <div class="additional-catalog__item additional-product">
+    <div class="additional-product additional-catalog__item">
       <h3>питьевая вода</h3>
       <span>5 литров</span>
       <span>50 Р.</span>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
-    <div class="additional-catalog__item additional-product">
+    <div class="additional-product additional-catalog__item">
       <h3>молоко</h3>
       <span>1 литр</span>
       <span>100 Р.</span>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
-    <div class="additional-catalog__item additional-product">
+    <div class="additional-product additional-catalog__item">
       <h3>витамины</h3>
       <span>1 упаковка (30 г)</span>
       <span>300 Р.</span>
-      <button class="btn order-button" type="button">заказать</button>
+      <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
-    <div class="additional-catalog__item product-bonus">
+    <div class="product-bonus additional-catalog__item">
       <p class="product-bonus__text"> Закажите все и получите чехол для кота в подарок!</p>
     </div>
   </section>
@@ -149,7 +149,7 @@
 
 <footer class="footer">
   <a href="#">
-    <img src="img/logo-mobile-header.svg.png" width="101" height="18" alt="Cat Energy">
+    <img src="img/footer-logo.png" width="101" height="18" alt="Cat Energy">
   </a>
   <div class="footer__social social-links">
     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" viewBox="0 0 22 12">
