@@ -1,0 +1,42 @@
+.product-card h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.product-card p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-card__btn {
+  width: 100%;
+}
+
+.show-more__btn {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  color: $black;
+  background-color: $light-gray-back;
+}
+
+.show-more__btn:hover {
+  background-color: $light-gray-modify;
+}
+
+.show-more__btn:active {
+  color: $black-03;
+}
+
+.additional-product__btn:hover,
+.product-card__btn:hover {
+  background-color: $green-hvr;
+  transition: 0.3s;
+}
+
+.additional-product__btn:active,
+.product-card__btn:active{
+  color: $base-color-03;
+  transition: 0.3s;
+}

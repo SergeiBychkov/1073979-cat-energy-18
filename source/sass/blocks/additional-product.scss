@@ -1,0 +1,13 @@
+.additional-product__btn {
+  width: 100%;
+}
+
+.additional-product__btn:hover {
+  background-color: $green-hvr;
+  transition: 0.3s;
+}
+
+.additional-product__btn:active {
+  color: $base-color-03;
+  transition: 0.3s;
+}
