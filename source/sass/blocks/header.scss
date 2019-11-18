@@ -1,0 +1,9 @@
+.header__logo-image:hover,
+.header__logo-text:hover {
+  opacity: 0.8;
+}
+
+.header__logo-image:active,
+.header__logo-text:active {
+  opacity: 0.6;
+}
