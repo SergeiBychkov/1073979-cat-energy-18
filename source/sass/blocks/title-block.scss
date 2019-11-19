@@ -21,14 +21,14 @@
 
 .tittle-block__btn {
   width: 100%;
-}
 
-.tittle-block__btn:hover {
-  background-color: $green-hvr;
-  transition: 0.3s;
-}
+  &:hover {
+    transition: 0.3s;
+    background-color: $green-hvr;
+  }
 
-.tittle-block__btn:active {
-  color: $base-color-03;
-  transition: 0.3s;
+  &:active {
+    transition: 0.3s;
+    color: $base-color-03;
+  }
 }
