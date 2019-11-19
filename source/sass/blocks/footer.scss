@@ -46,6 +46,16 @@
   }
 }
 
-.footer__copyright--image:hover {
-  fill: $green-hvr;
+.footer__copyright:hover {
+  & path {
+    transition: 0.3s;
+    fill: $green;
+  }
+}
+
+.footer__copyright:active {
+  & path {
+    transition: 0.3s;
+    fill: $green-active;
+  }
 }

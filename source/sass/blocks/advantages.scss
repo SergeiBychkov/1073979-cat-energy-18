@@ -2,47 +2,29 @@
   margin-left: 80px;
   margin-bottom: 20px;
 
-  &--leaf::before {
+  &::before {
     content: "";
-    background: url("../../img/advantage-leaf@1x.png") no-repeat;
     width: 60px;
     height: 60px;
     position: absolute;
     left: 20px;
     background-color: $green;
     background-position: center;
+  }
+
+  &--leaf::before {
+    background: url("../../img/advantage-leaf@1x.png") no-repeat;
   }
 
   &--powder::before {
-    content: "";
     background: url("../../img/advantage-powder@1x.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 20px;
-    background-color: $green;
-    background-position: center;
   }
 
   &--dining::before {
-    content: "";
     background: url("../../img/advantage-dining@1x.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 20px;
-    background-color: $green;
-    background-position: center;
   }
 
   &--clock::before {
-    content: "";
     background: url("../../img/advantage-clock@1x.png") no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    left: 20px;
-    background-color: $green;
-    background-position: center;
   }
 }
