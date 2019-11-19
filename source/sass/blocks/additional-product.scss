@@ -1,13 +1,36 @@
 .additional-product__btn {
   width: 100%;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    transition: 0.3s;
+    color: $base-color-03;
+  }
 }
 
-.additional-product__btn:hover {
-  background-color: $green-hvr;
-  transition: 0.3s;
+.product-bonus {
+  background: url("../../img/gift-photo-mobile@1x.jpg") no-repeat;
+  min-width: 280px;
+  min-height: 290px;
+
+  /*
+  &::before {
+    content: "";
+    background: url("../../img/icon-gift.svg") no-repeat;
+    width: 55px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+  }
+  */
 }
 
-.additional-product__btn:active {
-  color: $base-color-03;
-  transition: 0.3s;
+.product-bonus__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: $base-color;
 }

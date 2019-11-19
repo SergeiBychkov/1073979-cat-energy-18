@@ -19,14 +19,16 @@
   width: 100%;
   color: $black;
   background-color: $light-gray-back;
-}
 
-.show-more__btn:hover {
-  background-color: $light-gray-modify;
-}
+  &:hover {
+    transition: 0.3s;
+    background-color: $light-gray-modify;
+  }
 
-.show-more__btn:active {
-  color: $black-03;
+  &:active {
+    transition: 0.3s;
+    color: $black-03;
+  }
 }
 
 .additional-product__btn:hover,
