@@ -13,5 +13,7 @@
 }
 
 .contacts__map {
+  min-height: 362px;
+  background: url("../../img/bg-map-mobile@1x.png") no-repeat;
   background-color: $light-gray;
 }
