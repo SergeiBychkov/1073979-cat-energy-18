@@ -1,3 +1,7 @@
+.about-list {
+  position: relative;
+}
+
 .about-list__item {
   margin-left: 80px;
   margin-bottom: 20px;
@@ -7,24 +11,55 @@
     width: 60px;
     height: 60px;
     position: absolute;
-    left: 20px;
-    background-color: $green;
-    background-position: center;
+    left: 0;
   }
 
   &--leaf::before {
-    background: url("../../img/advantage-leaf@1x.png") no-repeat;
+    background: $green url("/img/advantage-leaf@1x.png") no-repeat center;
   }
 
   &--powder::before {
-    background: url("../../img/advantage-powder@1x.png") no-repeat;
+    background: $green url("/img/advantage-powder@1x.png") no-repeat center;
   }
 
   &--dining::before {
-    background: url("../../img/advantage-dining@1x.png") no-repeat;
+    background: $green url("/img/advantage-dining@1x.png") no-repeat center;
   }
 
   &--clock::before {
-    background: url("../../img/advantage-clock@1x.png") no-repeat;
+    background: $green url("/img/advantage-clock@1x.png") no-repeat center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-list__item {
+    width: 50%;
+    margin-left: 0;
+    padding-top: 100px;
+    margin-bottom: 50px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      top: -10px;
+    }
+
+    &--powder::before {
+      left: 50%;
+    }
+
+    &--dining::before {
+      top: 45%;
+    }
+
+    &--clock::before {
+      left: 50%;
+      top: 45%;
+    }
   }
 }

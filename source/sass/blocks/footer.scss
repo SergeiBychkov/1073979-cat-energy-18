@@ -3,8 +3,13 @@
   background-color: $light-gray;
 }
 
-.footer-logo {
+.footer__item {
   margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  text-align: center;
 
   &:hover {
     transition: 0.3s;
@@ -18,6 +23,9 @@
 }
 
 .social-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
   border-top: 2px solid $border-footer;
   border-bottom: 2px solid $border-footer;
 
@@ -57,5 +65,27 @@
   & path {
     transition: 0.3s;
     fill: $green-active;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 150px;
+  }
+
+  .footer__item {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  .social-links {
+    padding-top: 50px;
+
+    & a {
+      padding-right: 20px;
+    }
   }
 }

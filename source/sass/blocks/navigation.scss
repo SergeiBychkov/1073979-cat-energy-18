@@ -32,3 +32,23 @@
 .navigation ul {
   margin: 0;
 }
+
+@media (min-width: $tablet-width) {
+
+  .header__wrapper {
+    width: 30%;
+  }
+
+  .navigation__list {
+    display: flex;
+  }
+
+  .site-list__item {
+    margin: 0 10px;
+    border: none;
+  }
+
+  .site-list__item:last-child {
+    border: none;
+  }
+}

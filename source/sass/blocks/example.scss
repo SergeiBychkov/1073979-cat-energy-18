@@ -27,7 +27,29 @@
 }
 
 .example__text {
+  display: block;
+  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
+}
+
+.options-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: $base-color;
+  }
+
+  .example__photo {
+    background-color: $light-gray;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,3 +1,7 @@
+.header {
+  padding: 0 20px;
+}
+
 .header__logo-image:hover,
 .header__logo-text:hover {
   opacity: 0.8;
@@ -6,4 +10,35 @@
 .header__logo-image:active,
 .header__logo-text:active {
   opacity: 0.6;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-text {
+  padding-top: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    padding: 0 30px;
+  }
+
+  .header__wrapper {
+    padding-top: 12px;
+  }
+
+  .nav-button {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
 }

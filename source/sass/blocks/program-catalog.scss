@@ -16,25 +16,30 @@
   line-height: 37px;
   text-align: center;
 
+  &--second {
+    padding-left: 25px;
+  }
+
   &--first::before {
     content: "";
-    background: url("../../img/icon-cat-slim.svg") no-repeat;
+    background: url("/img/icon-cat-slim.svg") no-repeat;
     background-position: center;
     width: 35px;
     height: 49px;
     position: absolute;
-    left: 30px;
+    top: -13px;
+    left: 8px;
     z-index: 2;
   }
 
   &--second::before {
     content: "";
-    background: url("../../img/icon-cat-pro.svg") no-repeat;
+    background: url("/img/icon-cat-pro.svg") no-repeat;
     background-position: center;
     width: 67px;
     height: 28px;
     position: absolute;
-    left: 30px;
+    left: -8px;
     z-index: 2;
   }
 
@@ -45,7 +50,8 @@
     background-color: $green;
     border-radius: 50%;
     position: absolute;
-    left: 20px;
+    top: -10px;
+    left: 1px;
     z-index: 1;
   }
 
@@ -57,7 +63,7 @@
     border-radius: 50%;
     position: absolute;
     top: -10px;
-    left: 37px;
+    left: 1px;
     z-index: 1;
   }
 }
@@ -77,7 +83,7 @@
 
   &::after {
     content: "";
-    background: url("../../img/icon-right-arrow-long.svg") no-repeat;
+    background: url("/img/icon-right-arrow-long.svg") no-repeat;
     width: 24px;
     height: 11px;
     position: absolute;
@@ -88,7 +94,7 @@
   &:hover::after {
     content: "";
     transition: 0.3s;
-    background: url("../../img/icon-right-arrow-verylong.svg") no-repeat;
+    background: url("/img/icon-right-arrow-verylong.svg") no-repeat;
     width: 33px;
     height: 11px;
     position: absolute;
@@ -97,5 +103,53 @@
   &:active {
     transition: 0.3s;
     opacity: 0.3;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .program-catalog__wrapper {
+    padding-right: 50%;
+  }
+
+  .main-block__title--second {
+    padding-left: 0;
+  }
+
+  .main-block__title {
+    font-size: 36px;
+    line-height: 37px;
+    text-align: start;
+
+    &--first::before {
+      width: 140px;
+      height: 194px;
+      top: -20px;
+      left: 140%;
+    }
+
+    &--second::before {
+      width: 268px;
+      height: 112px;
+      left: 120%;
+    }
+
+    &--first::after {
+      width: 200px;
+      height: 200px;
+      left: 130%;
+    }
+
+    &--second::after {
+      width: 200px;
+      height: 200px;
+      top: -40px;
+      left: 130%;
+    }
+  }
+
+  .main-block__text {
+    font-size: 16px;
+    line-height: 24px;
   }
 }

@@ -1,4 +1,6 @@
 .contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
@@ -14,6 +16,7 @@
 
 .contacts__map {
   min-height: 362px;
-  background: url("../../img/bg-map-mobile@1x.png") no-repeat;
+  background: url("/img/bg-map-mobile@1x.png") no-repeat;
   background-color: $light-gray;
 }
+
