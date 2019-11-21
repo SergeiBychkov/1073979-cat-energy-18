@@ -2,27 +2,27 @@
   text-transform: uppercase;
   text-align: center;
   padding: 20px 0;
-  border-top: 2px solid $border-ul;
+  border-top: 2px solid $border-base;
 }
 
 .site-list__item:last-child {
-  border-bottom: 2px solid $border-ul;
+  border-bottom: 2px solid $border-base;
 }
 
 .site-list__link {
   font-size: 20px;
   line-height: 20px;
   color: $black;
-}
 
-.site-list__link:not(.site-list__link--active):hover {
-  color: $black-06;
-  transition: 0.3s;
-}
+  &:not(.site-list__link--active):hover {
+    transition: 0.3s;
+    color: $black-06;
+  }
 
-.site-list__link:not(.site-list__link--active):active {
-  color: $black-03;
-  transition: 0.3s;
+  &:not(.site-list__link--active):active {
+    transition: 0.3s;
+    color: $black-03;
+  }
 }
 
 .site-list__link--active {

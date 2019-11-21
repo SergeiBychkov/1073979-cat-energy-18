@@ -1,0 +1,55 @@
+.form-block h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.form-block p {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.program-form__field {
+  border: none;
+}
+
+.program-form__field label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__field legend {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.program-form__field input {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 2px solid $border-base;
+}
+
+.program-form__field textarea {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__btn {
+  font-size: 16px;
+  line-height: 20px;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    transition: 0.3s;
+    color: $base-color-03;
+  }
+}

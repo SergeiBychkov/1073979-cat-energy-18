@@ -15,30 +15,52 @@
   font-weight: 400;
   line-height: 37px;
   text-align: center;
-}
 
-.main-block__title--first::before {
-  content: "";
-  background: url("../../img/icon-cat-slim.svg") no-repeat;
-  background-position: center;
-  background-color: $green;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 30px;
-}
+  &--first::before {
+    content: "";
+    background: url("../../img/icon-cat-slim.svg") no-repeat;
+    background-position: center;
+    width: 35px;
+    height: 49px;
+    position: absolute;
+    left: 30px;
+    z-index: 2;
+  }
 
-.main-block__title--second::before {
-  content: "";
-  background: url("../../img/icon-cat-pro.svg") no-repeat;
-  background-position: center;
-  width: 67px;
-  height: 28px;
-  position: absolute;
-  left: 30px;
-}
+  &--second::before {
+    content: "";
+    background: url("../../img/icon-cat-pro.svg") no-repeat;
+    background-position: center;
+    width: 67px;
+    height: 28px;
+    position: absolute;
+    left: 30px;
+    z-index: 2;
+  }
 
+  &--first::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $green;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+  }
+
+  &--second::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $green;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 37px;
+    z-index: 1;
+  }
+}
 
 .main-block__text {
   font-size: 14px;
@@ -47,21 +69,33 @@
 }
 
 .main-block__link {
+  padding-right: 47px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
   color: $black;
-}
 
-.main-block__link::after {
-  content: "";
-  background: url("../../img/icon-right-arrow-long.svg") no-repeat;
-  width: 24px;
-  height: 11px;
-  position: absolute;
-}
+  &::after {
+    content: "";
+    background: url("../../img/icon-right-arrow-long.svg") no-repeat;
+    width: 24px;
+    height: 11px;
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 6px;
+  }
 
-.main-block__link:active {
-  color: $black-03;
-  transition: 0.3s;
+  &:hover::after {
+    content: "";
+    transition: 0.3s;
+    background: url("../../img/icon-right-arrow-verylong.svg") no-repeat;
+    width: 33px;
+    height: 11px;
+    position: absolute;
+  }
+
+  &:active {
+    transition: 0.3s;
+    opacity: 0.3;
+  }
 }
