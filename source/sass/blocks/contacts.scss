@@ -1,0 +1,20 @@
+.contacts__wrapper {
+  padding: 20px;
+}
+
+.contacts__text--invite {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.contacts__text--address {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__map {
+  min-height: 362px;
+  background: url("../../img/bg-map-mobile@1x.png") no-repeat;
+  background-position: center;
+  background-color: $light-gray;
+}
