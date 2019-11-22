@@ -15,7 +15,26 @@
 }
 
 .contacts__map {
+  overflow: hidden;
   min-height: 362px;
-  background: url("/img/bg-map-mobile@1x.png") no-repeat;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat;
   background-color: $light-gray;
+}
+
+.contacts-page {
+  background-color: $light-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__map {
+    min-height: 396px;
+    background: url("../img/bg-map-tablet@1x.png") no-repeat;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__map {
+    min-height: 400px;
+    background: url("../img/bg-map-desktop@1x.png") no-repeat;
+  }
 }

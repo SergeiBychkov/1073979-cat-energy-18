@@ -28,7 +28,14 @@ ul {
 }
 
 iframe {
+  height: 400px;
   width: 100%;
-  min-height: 362px;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .header,
+  .main {
+    width: 768px;
+  }
 }

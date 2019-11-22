@@ -16,8 +16,9 @@
 }
 
 .title-block {
+  position: relative;
   text-align: center;
-  background: url("/img/index-background-mobile@1x.jpg") no-repeat;
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat;
 }
 
 .tittle-block__btn {
@@ -71,5 +72,17 @@
     line-height: 20px;
     display: block;
     width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-block {
+    position: relative;
+    padding-top: 170px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    top: -65px;
+    z-index: -1;
   }
 }

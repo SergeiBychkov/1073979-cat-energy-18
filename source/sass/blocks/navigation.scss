@@ -34,6 +34,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .navigation {
+    margin-left: auto;
+  }
+
   .header__wrapper {
     width: 30%;
   }
@@ -49,5 +53,26 @@
 
   .site-list__item:last-child {
     border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__link {
+    color: $base-color;
+    line-height: 25px;
+
+    &:not(.site-list__link--active):hover {
+      transition: 0.3s;
+      color: $base-color-06;
+    }
+
+    &:not(.site-list__link--active):active {
+      transition: 0.3s;
+      color: $base-color-03;
+    }
+  }
+
+  .site-list__link--active {
+    border-bottom: 2px solid $base-color;
   }
 }

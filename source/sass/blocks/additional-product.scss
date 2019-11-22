@@ -1,5 +1,6 @@
 .additional-product__btn {
   width: 100%;
+  margin-top: 15px;
 
   &:hover {
     transition: 0.3s;
@@ -13,23 +14,31 @@
 }
 
 .product-bonus {
-  background: url("/img/gift-photo-mobile@1x.jpg") no-repeat;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 15px 0;
+  justify-items: center;
+  position: relative;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat;
   min-width: 280px;
   min-height: 290px;
 
-  /*
   &::before {
     content: "";
     background: url("../../img/icon-gift.svg") no-repeat;
+    color: $base-color;
     width: 55px;
     height: 60px;
     position: absolute;
+    top: 20%;
     left: 50%;
+    transform: translateX(-50%);
   }
-  */
 }
 
 .product-bonus__text {
+  padding: 50px;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: $base-color;

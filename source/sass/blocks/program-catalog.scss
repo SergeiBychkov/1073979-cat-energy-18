@@ -22,7 +22,7 @@
 
   &--first::before {
     content: "";
-    background: url("/img/icon-cat-slim.svg") no-repeat;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
     background-position: center;
     width: 35px;
     height: 49px;
@@ -34,7 +34,7 @@
 
   &--second::before {
     content: "";
-    background: url("/img/icon-cat-pro.svg") no-repeat;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
     background-position: center;
     width: 67px;
     height: 28px;
@@ -83,7 +83,7 @@
 
   &::after {
     content: "";
-    background: url("/img/icon-right-arrow-long.svg") no-repeat;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
     width: 24px;
     height: 11px;
     position: absolute;
@@ -94,7 +94,7 @@
   &:hover::after {
     content: "";
     transition: 0.3s;
-    background: url("/img/icon-right-arrow-verylong.svg") no-repeat;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
     width: 33px;
     height: 11px;
     position: absolute;
@@ -151,5 +151,12 @@
   .main-block__text {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program-catalog {
+    display: flex;
+    padding: 40px;
   }
 }

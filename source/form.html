@@ -9,24 +9,29 @@
 </head>
 <body>
 <header class="header">
-  <a class="header__logo-image" href="index.html">
-    <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
-  </a>
-  <a class="header__logo-text" href="index.html">
-    <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
-  </a>
-  <nav class="navigation">
-    <button type="button">
+  <div class="header__wrapper">
+    <a class="header__logo-image" href="#">
+      <picture>
+        <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+        <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
+      </picture>
+    </a>
+    <a class="header__logo-text" href="#">
+      <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
+    </a>
+    <button class="nav-button" type="button">
       <span class="visually-hidden">открыть меню</span>
     </button>
+  </div>
+  <nav class="navigation">
     <ul class="navigation__list site-list">
-      <li class="site-list__item">
+      <li class="site-list__item site-list__item--active">
         <a class="site-list__link" href="index.html">главная</a>
       </li>
       <li class="site-list__item">
         <a class="site-list__link" href="catalog.html">каталог продукции</a>
       </li>
-      <li class="site-list__item site-list__item--active">
+      <li class="site-list__item">
         <a class="site-list__link site-list__link--active">подбор программы</a>
       </li>
     </ul>

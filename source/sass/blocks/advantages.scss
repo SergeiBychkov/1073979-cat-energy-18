@@ -15,19 +15,19 @@
   }
 
   &--leaf::before {
-    background: $green url("/img/advantage-leaf@1x.png") no-repeat center;
+    background: $green url("../img/advantage-leaf@1x.png") no-repeat center;
   }
 
   &--powder::before {
-    background: $green url("/img/advantage-powder@1x.png") no-repeat center;
+    background: $green url("../img/advantage-powder@1x.png") no-repeat center;
   }
 
   &--dining::before {
-    background: $green url("/img/advantage-dining@1x.png") no-repeat center;
+    background: $green url("../img/advantage-dining@1x.png") no-repeat center;
   }
 
   &--clock::before {
-    background: $green url("/img/advantage-clock@1x.png") no-repeat center;
+    background: $green url("../img/advantage-clock@1x.png") no-repeat center;
   }
 }
 
@@ -38,10 +38,12 @@
   }
 
   .about-list__item {
+    font-size: 16px;
+    line-height: 24px;
     width: 50%;
     margin-left: 0;
     padding-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 130px;
 
     &::before {
       width: 80px;
@@ -61,5 +63,45 @@
       left: 50%;
       top: 45%;
     }
+  }
+
+  .about-list__item--leaf::after {
+    content: "1";
+    position: absolute;
+    top: 90px;
+    left: 120px;
+    color: $light-gray;
+    font-size: 280px;
+    z-index: -1;
+  }
+
+  .about-list__item--powder::after {
+    content: "2";
+    position: absolute;
+    top: 90px;
+    right: 125px;
+    color: $light-gray;
+    font-size: 280px;
+    z-index: -1;
+  }
+
+  .about-list__item--dining::after {
+    content: "3";
+    position: absolute;
+    top: 380px;
+    left: 85px;
+    color: $light-gray;
+    font-size: 280px;
+    z-index: -1;
+  }
+
+  .about-list__item--clock::after {
+    content: "4";
+    position: absolute;
+    top: 380px;
+    left: 470px;
+    color: $light-gray;
+    font-size: 280px;
+    z-index: -1;
   }
 }

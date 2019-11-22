@@ -11,7 +11,10 @@
 <header class="header">
   <div class="header__wrapper">
   <a class="header__logo-image" href="#">
+    <picture>
+      <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
     <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
+    </picture>
   </a>
   <a class="header__logo-text" href="#">
     <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
@@ -41,6 +44,7 @@
       <p>занялся собой? займись котом!</p>
       <picture class="title-block__image">
         <source srcset="img/index-can-desktop@1x.png" media="(min-width: 768px)">
+        <source srcset="img/index-background-desktop@1x.jpg" media="(min-width: 1200px)">
         <img src="img/index-can-mobile@1x.png" width="280" height="271" alt="порция корма">
       </picture>
       <a class="btn tittle-block__btn" href="form.html">подобрать программу</a>

@@ -2,6 +2,14 @@
   padding: 0 20px;
 }
 
+.nav-button {
+  border: none;
+  margin-top: 10px;
+  background: url("../img/icon-close.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+}
+
 .header__logo-image:hover,
 .header__logo-text:hover {
   opacity: 0.8;
@@ -32,13 +40,10 @@
   }
 
   .nav-button {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
+    display: none;
+  }
+
+  .header__logo-text {
+    display: none;
   }
 }
