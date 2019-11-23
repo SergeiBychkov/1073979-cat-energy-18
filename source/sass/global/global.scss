@@ -10,6 +10,19 @@ body {
   background-color: #ffffff;
 }
 
+@media (min-width: $tablet-width) {
+  body {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    width: 1440px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -31,11 +44,4 @@ iframe {
   height: 400px;
   width: 100%;
   border: none;
-}
-
-@media (min-width: $tablet-width) {
-  .header,
-  .main {
-    width: 768px;
-  }
 }

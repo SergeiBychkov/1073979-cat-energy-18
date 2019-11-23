@@ -1,5 +1,6 @@
 .contacts__wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
 }
@@ -26,6 +27,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    padding: 30px;
+  }
+
   .contacts__map {
     min-height: 396px;
     background: url("../img/bg-map-tablet@1x.png") no-repeat;

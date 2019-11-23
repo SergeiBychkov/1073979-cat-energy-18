@@ -29,6 +29,7 @@
 
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px 20px;
 
@@ -75,6 +76,7 @@
 @media (min-width: $tablet-width) {
   .footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     min-height: 150px;
   }

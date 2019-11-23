@@ -37,10 +37,14 @@
     flex-wrap: wrap;
   }
 
+  .about-list__item:nth-child(odd) {
+    margin-right: 180px;
+  }
+
   .about-list__item {
     font-size: 16px;
     line-height: 24px;
-    width: 50%;
+    width: 220px;
     margin-left: 0;
     padding-top: 100px;
     margin-bottom: 130px;
@@ -52,7 +56,7 @@
     }
 
     &--powder::before {
-      left: 50%;
+      left: 56%;
     }
 
     &--dining::before {
@@ -60,7 +64,7 @@
     }
 
     &--clock::before {
-      left: 50%;
+      left: 56%;
       top: 45%;
     }
   }
@@ -68,7 +72,7 @@
   .about-list__item--leaf::after {
     content: "1";
     position: absolute;
-    top: 90px;
+    top: 80px;
     left: 120px;
     color: $light-gray;
     font-size: 280px;
@@ -78,8 +82,8 @@
   .about-list__item--powder::after {
     content: "2";
     position: absolute;
-    top: 90px;
-    right: 125px;
+    top: 80px;
+    right: 80px;
     color: $light-gray;
     font-size: 280px;
     z-index: -1;
@@ -88,7 +92,7 @@
   .about-list__item--dining::after {
     content: "3";
     position: absolute;
-    top: 380px;
+    top: 360px;
     left: 85px;
     color: $light-gray;
     font-size: 280px;
@@ -98,10 +102,59 @@
   .about-list__item--clock::after {
     content: "4";
     position: absolute;
-    top: 380px;
-    left: 470px;
+    top: 360px;
+    left: 500px;
     color: $light-gray;
     font-size: 280px;
     z-index: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-list__item {
+    text-align: start;
+    width: 245px;
+    margin-right: 0;
+
+    &--powder::before {
+      left: 27%;
+    }
+
+    &--dining::before {
+      top: -10px;
+      left: 53%;
+    }
+
+    &--clock::before {
+      top: -10px;
+      left: 80%;
+    }
+
+    &--leaf::after {
+      top: 80px;
+    }
+
+    &--powder::after {
+      top: 80px;
+      left: 36%;
+    }
+
+    &--dining::after {
+      top: 80px;
+      left: 63%;
+    }
+
+    &--clock::after {
+      top: 80px;
+      left: 89%;
+    }
+  }
+
+  .advantages__list .about-list__item {
+    margin-right: 80px;
+  }
+
+  .advantages__list .about-list__item:last-child {
+    margin-right: 0;
   }
 }

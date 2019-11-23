@@ -16,6 +16,10 @@
   color: $dark-silver;
 }
 
+.example__photo {
+  text-align: center;
+}
+
 .options-list__option {
   font-size: 24px;
   line-height: 24px;
@@ -36,20 +40,55 @@
 
 .options-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 @media (min-width: $tablet-width) {
   .example {
     background-color: $base-color;
+    padding: 0;
+  }
+
+  .example h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .options-list {
+    width: 384px;
+  }
+
+  .example__wrapper {
+    padding: 30px;
   }
 
   .example__photo {
     background-color: $light-gray;
+
+    & img {
+      width: 690px;
+      height: 517px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    display: flex;
+    background-color: $light-gray;
   }
 
-  .example__wrapper {
-    display: flex;
-    justify-content: space-between;
+  .example__description {
+    width: 570px;
+  }
+
+  .example__photo {
+    width: 570px;
+  }
+
+  .example h2 {
+    font-size: 60px;
+    line-height: 60px;
   }
 }

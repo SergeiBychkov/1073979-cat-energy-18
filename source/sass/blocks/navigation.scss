@@ -44,6 +44,7 @@
 
   .navigation__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .site-list__item {
@@ -57,7 +58,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-list__link {
+  .site-list__link--index {
     color: $base-color;
     line-height: 25px;
 
