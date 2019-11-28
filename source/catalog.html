@@ -22,45 +22,48 @@
     <button class="nav-button" type="button">
       <span class="visually-hidden">открыть меню</span>
     </button>
+    <nav class="navigation">
+      <ul class="navigation__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">главная</a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__link site-list__link--active">каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="form.html">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav class="navigation">
-    <ul class="navigation__list site-list">
-      <li class="site-list__item site-list__item--active">
-        <a class="site-list__link" href="index.html">главная</a>
-      </li>
-      <li class="site-list__item">
-        <a class="site-list__link site-list__link--active">каталог продукции</a>
-      </li>
-      <li class="site-list__item">
-        <a class="site-list__link" href="form.html">подбор программы</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 <main>
   <h1 class="visually-hidden">здоровое питание для вашего питомца</h1>
   <section class="product-catalog">
     <h2 class="product-catalog__title">Каталог продукции</h2>
     <div class="product-catalog__item product-card">
-      <p>
-        <img src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="маленькая порция с курией">
-      </p>
+      <picture>
+        <source srcset="img/chicken-small-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/chicken-small-desktop@1x.png" media="(min-width: 1300px)">
+        <img src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="большая порция с курией">
+      </picture>
       <div class="product-card__wrapper">
-      <h3>CAT ENERGY PRO 500 Г</h3>
-      <p>Объём</p>
-      <p>500 г</p>
-      <p>Вкус</p>
-      <p> Курица</p>
-      <p>Цена</p>
-      <p>700 Р.</p>
-      </div>
+        <h3>CAT ENERGY PRO 500 Г</h3>
+        <p>Объём</p>
+        <p>500 г</p>
+        <p>Вкус</p>
+        <p> Курица</p>
+        <p>Цена</p>
+        <p>500 Р.</p>
       </div>
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/chicken-big-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/chicken-big-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/chicken-big-mobile@1x.jpg" width="140" height="144" alt="большая порция с курией">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
       <h3>CAT ENERGY PRO 1000 Г</h3>
       <p>Объём</p>
@@ -73,9 +76,11 @@
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/fish-small-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/fish-small-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/fish-small-mobile@1x.jpg" width="140" height="144" alt="маленькая порция с рыбой">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
       <h3>CAT ENERGY PRO 500 Г</h3>
       <p>Объём</p>
@@ -88,9 +93,11 @@
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/fish-big-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/fish-big-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/fish-big-mobile@1x.jpg" width="140" height="144" alt="большая порция с рыбой">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
       <h3>CAT ENERGY PRO 1000 Г</h3>
       <p>Объём</p>
@@ -103,9 +110,11 @@
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/buckwheat-small-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/buckwheat-small-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/buckwheat-small-mobile@1x.jpg" width="140" height="144" alt="маленькая порция с гречкой">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
       <h3>CAT ENERGY SLIM 500 Г</h3>
       <p>Объём</p>
@@ -118,24 +127,28 @@
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/buckwheat-big-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/buckwheat-big-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/buckwheat-big-mobile@1x.jpg" width="140" height="144" alt="большая порция с гречкой">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
-      <h3>CAT ENERGY SLIM 1000 Г</h3>
-      <p>Объём</p>
-      <p>1000 г</p>
-      <p>Вкус</p>
-      <p>Гречка</p>
-      <p>Цена</p>
-      <p>700 Р.</p>
+        <h3>CAT ENERGY SLIM 1000 Г</h3>
+        <p>Объём</p>
+        <p>1000 г</p>
+        <p>Вкус</p>
+        <p>Гречка</p>
+        <p>Цена</p>
+        <p>700 Р.</p>
       </div>
       <button class="btn product-card__btn" type="button">заказать</button>
     </div>
     <div class="product-catalog__item product-card">
-      <p>
+      <picture>
+        <source srcset="img/rice-small-tablet@1x.png" media="(min-width: 768px)">
+        <source srcset="img/rice-small-desktop@1x.png" media="(min-width: 1300px)">
         <img src="img/rice-small-mobile@1x.jpg" width="140" height="144" alt="маленькая порция с рисом">
-      </p>
+      </picture>
       <div class="product-card__wrapper">
       <h3>CAT ENERGY SLIM 500 Г</h3>
       <p>Объём</p>
@@ -154,30 +167,32 @@
     </div>
   </section>
   <section class="additional-catalog">
-    <h2 class="visually-hidden">дополнительные товары</h2>
+    <h2 >Дополнительные товары</h2>
+    <div class="additional-catalog__wrapper">
     <div class="additional-catalog__item additional-product">
       <h3>сахарозаменитель</h3>
-      <span>1 упаковка (100 г)</span>
-      <span>200 Р.</span>
+      <p>1 упаковка (100 г)</p>
+      <p>200 Р.</p>
       <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
     <div class="additional-catalog__item additional-product">
       <h3>питьевая вода</h3>
-      <span>5 литров</span>
-      <span>50 Р.</span>
+      <p>5 литров</p>
+      <p>50 Р.</p>
       <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
     <div class="additional-catalog__item additional-product">
       <h3>молоко</h3>
-      <span>1 литр</span>
-      <span>100 Р.</span>
+      <p>1 литр</p>
+      <p>100 Р.</p>
       <button class="btn additional-product__btn" type="button">заказать</button>
     </div>
     <div class="additional-catalog__item additional-product">
       <h3>витамины</h3>
-      <span>1 упаковка (30 г)</span>
-      <span>300 Р.</span>
+      <p>1 упаковка (30 г)</p>
+      <p>300 Р.</p>
       <button class="btn additional-product__btn" type="button">заказать</button>
+    </div>
     </div>
     <div class="additional-catalog__item product-bonus">
       <p class="product-bonus__text"> Закажите все и получите чехол для кота в подарок!</p>
@@ -186,8 +201,8 @@
   <section class="contacts contacts-page">
     <div class="contacts__wrapper">
       <h2 class="visually-hidden">контакты Cat Energy</h2>
-      <p class="contacts__text contacts__text--invite">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__text contacts__text--address">ул. Большая конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="contacts__text contacts__text--invite">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+      <p class="contacts__text contacts__text--address">ул. Большая<br> конюшенная, д. 19/8<br> Санкт-Петербург</p>
     </div>
     <div class="contacts__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056816!2d30.320853351861462!3d59.93871916896506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574173267974!5m2!1sru!2sru" allowfullscreen=""></iframe>
@@ -195,9 +210,11 @@
   </section>
 </main>
 <footer class="footer">
-  <a class="footer-logo" href="index.html">
-    <img src="img/footer-logo.png" width="101" height="18" alt="Cat Energy">
-  </a>
+  <div class="footer__item">
+    <a class="footer-logo" href="#">
+      <img src="img/footer-logo.png" width="128" height="24" alt="Cat Energy">
+    </a>
+  </div>
   <div class="footer__social social-links">
     <a href="#"><span class="visually-hidden">вконтакте</span>
       <svg class="social-links__icon" xmlns="http://www.w3.org/2000/svg" width="22" height="12" x="0px" y="0px" viewBox="0 0 22 12">
@@ -217,10 +234,14 @@
       </svg>
     </a>
   </div>
-  <a class="footer__copyright footer__copyright--text" href="https://htmlacademy.ru/intensive/adaptive">
-    <span>HTML Academy</span>
-    <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 60 60"><path fill="#666666" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
-  </a>
+  <div class="footer__copyright-wrapper">
+    <a class="footer__copyright footer__copyright--text" href="https://htmlacademy.ru/intensive/adaptive">
+      <p>HTML Academy</p>
+    </a>
+    <a class="footer__copyright footer__copyright--logo" href="https://htmlacademy.ru/intensive/adaptive">
+      <svg xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 60 60"><path fill="#666666" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+    </a>
+  </div>
 </footer>
 </body>
 </html>

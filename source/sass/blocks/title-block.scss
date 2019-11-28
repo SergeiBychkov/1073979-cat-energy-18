@@ -18,7 +18,7 @@
 .title-block {
   position: relative;
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat;
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 64%, $base-color 36%);
 }
 
 .tittle-block__btn {
@@ -41,12 +41,12 @@
 
 @media (min-width: $tablet-width) {
   .title-block {
-    background: $base-color;
+    background: none;
   }
 
   .title-block__wrapper {
     position: relative;
-    margin-left: 90px;
+    margin-left: 60px;
     padding: 30px;
   }
 
@@ -82,16 +82,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .title-block {
-    position: relative;
-    padding-top: 170px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: right top;
-    top: -65px;
-    z-index: -1;
-  }
-
   .title-block__wrapper {
     display: flex;
     flex-wrap: wrap;
