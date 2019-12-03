@@ -109,6 +109,7 @@
 
 @media (min-width: $tablet-width) {
   .program-catalog {
+    @include tablet-mix;
     padding: 30px;
   }
 
@@ -159,18 +160,20 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-block {
-    width: 570px;
-    padding-right: 0;
-  }
-
   .program-catalog {
+    @include desktop-mix;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
     padding: 0 110px;
   }
+
+  .main-block {
+    width: 570px;
+    padding-right: 0;
+  }
+
 
   .main-block__title {
     text-align: center;

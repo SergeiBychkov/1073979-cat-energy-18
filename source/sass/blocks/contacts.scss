@@ -28,6 +28,7 @@
 
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
+    @include tablet-mix;
     padding: 30px;
   }
 
