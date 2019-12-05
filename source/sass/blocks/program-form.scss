@@ -1,11 +1,24 @@
-.program-form fieldset {
-  border: none;
-}
-
 .program-form legend {
   font-size: 24px;
   line-height: 24px;
   padding: 20px 0;
+}
+
+.program-form__container {
+  position: relative;
+
+  &--line::after {
+    @include line;
+    top: 43px;
+    z-index: -1;
+  }
+}
+
+.program-form__field {
+  @include container-mobile;
+  margin-left: 0;
+  margin-right: 0;
+  border: none;
 }
 
 .program-field__label {
@@ -23,7 +36,7 @@
   border: 2px solid $border-base;
 }
 
-.program-form .program-form__field--border {
+.program-form__field--border {
   padding: 10px;
   border-top: 2px solid $border-base;
   border-bottom: 2px solid $border-base;
@@ -48,23 +61,14 @@
 .program-form__legend {
   display: inline-block;
   position: relative;
+  margin-left: -20px;
+  padding-left: 20px;
   padding-right: 20px;
   vertical-align: middle;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   background-color: $base-color;
-
-  &::after {
-    content: "";
-    width: 100vw;
-    height: 3px;
-    background-color: $green;
-    position: absolute;
-    top: 12px;
-    left: 0;
-    z-index: -1;
-  }
 }
 
 .filter-program__item {
@@ -142,19 +146,44 @@
   }
 }
 
+.input-mail {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 5%;
+    background: url("../img/icon-mail.svg") no-repeat;
+    width: 17px;
+    height: 13px;
+  }
+}
+
+.input-phone {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 4%;
+    background: url("../img/icon-phone.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+}
 
 @media (min-width: $tablet-width) {
-  .program-form {
-    @include tablet-mix;
-  }
-
   .program-form__field {
-    padding: 0 30px;
+    @include tablet-mix;
+    @include container-tablet;
   }
 
-  .program-form .program-form__field--border {
-    margin: 30px;
-    border: 2px solid $border-base;
+  .program-form__field--border {
+    border: none;
+  }
+
+  .program-form__legend {
+    margin-left: 0;
   }
 
   .additional-list {
@@ -164,82 +193,71 @@
   }
 
   .additional-list__item {
-    width: calc(50% - 45px);
-  }
-
-  .program-form__legend {
-    font-size: 36px;
-    line-height: 36px;
+    width: calc(50% - 30px);
   }
 
   .submit-list {
     display: flex;
-    margin-bottom: 40px;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: space-between;
   }
 
   .program-form__btn {
-    margin-top: 0;
-    width: calc(50% - 40px);
+    width: calc(50% - 30px);
+  }
+
+  .submit-list__text {
+    width: calc(50% - 30px);
+  }
+
+  .filter-program {
+    padding: 25px;
+    border: 2px solid $border-base;
+  }
+
+  .filter-program__item:nth-last-of-type(1) {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .program-form {
-    @include desktop-mix;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 110px;
-  }
-
-  .program-form__field:nth-of-type(1),
-  .program-form__field:nth-of-type(2) {
-    padding: 0;
-    width: calc(50% - 40px);
-  }
-
-  .program-form__field {
-    padding: 0;
+  .program-form__container {
     width: 100%;
   }
 
-  .program-form .program-form__field--border {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 25px;
-  }
-
-  .additional-list__item {
-    width: calc(25% - 45px);
-  }
-
-  .program-field__label {
-    margin: 25px 0;
-  }
-
-  .program-field__label:nth-of-type(1) {
-    margin-top: 0;
-  }
-
-  .information-field label:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .program-form__btn {
-    margin-right: 80px;
+  .program-form__field {
+    @include desktop-mix;
+    @include container-desktop;
   }
 
   .contacts-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .contacts-list__item {
     width: calc(50% - 40px);
+  }
 
-    &:nth-of-type(1n) {
-      margin-right: 80px;
+  .additional-list__item {
+    width: calc(25% - 40px);
+  }
+
+  .information-field,
+  .program-form__field--border {
+    padding: 0;
+  }
+
+  .program-form__wrapper {
+    @include desktop-mix;
+    @include container-desktop;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & .program-form__container {
+      width: calc(50% - 40px);
     }
   }
 }

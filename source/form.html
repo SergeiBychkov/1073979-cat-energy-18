@@ -39,14 +39,20 @@
 <main>
   <h1 class="visually-hidden">здоровое питание для вашего питомца</h1>
   <section class="form-block">
+    <div class="form-block__container">
     <h2 class="form-block__title">Подбор программы</h2>
     <p class="form-block__text">заполните анкеты и мы подберем программу питания для вашего кота</p>
+    </div>
     <form class="program-form" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div class="program-form__wrapper">
+      <div class="program-form__container">
       <fieldset class="program-form__field information-field">
         <label class="program-field__label" for="name"> Имя:* <input class="information-field__input" type="text" name="name" id="name" value="БАРСИК" placeholder="Имя питомца" required></label>
         <label class="program-field__label" for="weight"> Вес (КГ):* <input class="information-field__input" type="text" name="weight" id="weight" value="7" placeholder="Вес питомца" required></label>
         <label class="program-field__label" for="age"> Возраст (лет): <input class="information-field__input" type="text" name="age" id="age" value="7" placeholder="Возраст питомца"></label>
       </fieldset>
+      </div>
+      <div class="program-form__container">
       <fieldset class="program-form__field program-form__field--border">
         <ul class="filter-program">
           <li class="filter-program__item">
@@ -63,21 +69,28 @@
           </li>
         </ul>
       </fieldset>
+      </div>
+      </div>
+      <div class="program-form__container program-form__container--line">
       <fieldset class="program-form__field">
         <h3 class="program-form__legend">Контактные данные (владельца кота)</h3>
         <ul class="contacts-list">
           <li class="contacts-list__item">
-        <label class="program-field__label" for="email"> e-mail:* <input class="information-field__input" type="email" name="email" id="email" value="kuklachev@gmail.com" placeholder="example@gmail.com" required></label>
+        <label class="program-field__label input-mail" for="email"> e-mail:* <input class="information-field__input" type="email" name="email" id="email" value="kuklachev@gmail.com" placeholder="example@gmail.com" required></label>
           </li>
           <li class="contacts-list__item">
-        <label class="program-field__label" for="tel"> телефон:* <input class="information-field__input" type="tel" name="tel" id="tel" value="8 (960) 900-60-90" placeholder="x (xxx) xxx-xx-xx" required></label>
+        <label class="program-field__label input-phone" for="tel"> телефон:* <input class="information-field__input" type="tel" name="tel" id="tel" value="8 (960) 900-60-90" placeholder="x (xxx) xxx-xx-xx" required></label>
         </li>
         </ul>
       </fieldset>
+      </div>
+      <div class="program-form__container program-form__container--line">
       <fieldset class="program-form__field">
         <h3 class="program-form__legend">Комментарии</h3>
         <textarea class="program-form__comment-field" name="comment" rows="8" placeholder="расскажите обо всех повадках кота"></textarea>
       </fieldset>
+      </div>
+      <div class="program-form__container program-form__container--line">
       <fieldset class="program-form__field additional-product-field">
         <h3  class="program-form__legend">Дополнительно</h3>
         <ul class="additional-product-field__list additional-list">
@@ -103,6 +116,7 @@
             <p class="submit-list__text">* - обязательные поля</p>
           </div>
       </fieldset>
+      </div>
     </form>
   </section>
   <section class="contacts contacts-page">

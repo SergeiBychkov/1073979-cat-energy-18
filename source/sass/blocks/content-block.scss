@@ -24,5 +24,6 @@
   .content-block {
     @include desktop-mix;
     padding: 0 110px;
+    min-height: 415px;
   }
 }

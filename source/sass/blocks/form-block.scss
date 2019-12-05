@@ -1,3 +1,7 @@
+.form-block__container {
+  @include container-mobile;
+}
+
 .program-form__btn {
   font-size: 16px;
   line-height: 20px;
@@ -14,52 +18,58 @@
 }
 
 .form-block {
+  margin-bottom: 50px;
   padding-top: 5px;
 
   & input {
     box-sizing: border-box;
     height: 50px;
   }
-
-  & h2 {
-    font-size: 36px;
-    line-height: 60px;
-    font-weight: 400;
-    padding: 0 20px;
-  }
-
-  & p {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 0 20px;
-    text-transform: uppercase;
-  }
 }
 
+.form-block__title {
+  font-size: 33px;
+  line-height: 60px;
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+.form-block__text {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+
 @media (min-width: $tablet-width) {
-  .form-block {
+  .form-block__container {
     @include tablet-mix;
+    @include container-tablet;
+  }
 
-    & h2 {
-      padding: 0 30px;
-    }
+  .form-block__title {
+    padding-left: 0;
+  }
 
-    & p {
-      padding: 0 30px;
-    }
+  .form-block__text {
+    width: 245px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form-block {
+  .program-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-block__container {
     @include desktop-mix;
+    @include container-desktop;
+  }
 
-    & .form-block__title {
-      padding: 0 110px;
-    }
-
-    & .form-block__text {
-      padding: 0 110px;
-    }
+  .form-block__text {
+    padding: 0;
   }
 }

@@ -1,6 +1,17 @@
-.additional-catalog {
+.additional-catalog__container {
   padding: 0 20px;
   position: relative;
+}
+
+.additional-catalog {
+  position: relative;
+
+  &::after {
+    @include line;
+    top: 33px;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .additional-catalog h2 {
@@ -12,23 +23,16 @@
   line-height: 24px;
   font-weight: 400;
   background-color: $base-color;
-
-  &::after {
-    content: "";
-    width: 100vw;
-    height: 3px;
-    background-color: $green;
-    position: absolute;
-    top: 33px;
-    right: 0;
-    z-index: -1;
-  }
 }
 
 @media (min-width: $tablet-width) {
-  .additional-catalog {
+  .additional-catalog::after {
+    top: 50px;
+  }
+
+  .additional-catalog__container {
     @include tablet-mix;
-    padding: 0 30px;
+    @include container-tablet;
   }
 
   .additional-catalog h2 {
@@ -37,33 +41,21 @@
     margin-left: 0;
     margin-bottom: 100px;
     padding: 0 30px;
-
-    &::before {
-      content: "";
-      width: 100vw;
-      height: 3px;
-      background-color: $green;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      z-index: -1;
-    }
-
-    &::after {
-      top: 50px;
-      left: 0;
-    }
   }
 }
 
 
 @media (min-width: $desktop-width) {
-  .additional-catalog {
+  .additional-catalog__container {
     @include desktop-mix;
+    @include container-desktop;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
-    padding: 0 110px;
+  }
+
+  .additional-catalog__wrapper {
+    width: 75%;
   }
 
   .product-catalog {

@@ -4,7 +4,7 @@
 
 .about-list__item {
   margin-left: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 
   &::before {
     content: "";
@@ -35,16 +35,13 @@
   .about-list {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .about-list__item:nth-child(odd) {
-    margin-right: 180px;
+    justify-content: space-between;
   }
 
   .about-list__item {
     font-size: 16px;
     line-height: 24px;
-    width: 220px;
+    width: 40%;
     margin-left: 0;
     padding-top: 100px;
     margin-bottom: 130px;
@@ -56,7 +53,7 @@
     }
 
     &--powder::before {
-      left: 56%;
+      left: 60%;
     }
 
     &--dining::before {
@@ -64,7 +61,7 @@
     }
 
     &--clock::before {
-      left: 56%;
+      left: 60%;
       top: 45%;
     }
   }
@@ -83,7 +80,7 @@
     content: "2";
     position: absolute;
     top: 80px;
-    right: 80px;
+    right: 8%;
     color: $light-gray;
     font-size: 280px;
     z-index: -1;
@@ -93,7 +90,7 @@
     content: "3";
     position: absolute;
     top: 360px;
-    left: 85px;
+    left: 124px;
     color: $light-gray;
     font-size: 280px;
     z-index: -1;
@@ -103,7 +100,7 @@
     content: "4";
     position: absolute;
     top: 360px;
-    left: 500px;
+    right: 8%;
     color: $light-gray;
     font-size: 280px;
     z-index: -1;
@@ -113,7 +110,7 @@
 @media (min-width: $desktop-width) {
   .about-list__item {
     text-align: start;
-    width: 245px;
+    width: calc(25% - 40px);
     margin-right: 0;
 
     &--powder::before {
@@ -148,10 +145,6 @@
       top: 80px;
       left: 89%;
     }
-  }
-
-  .advantages__list .about-list__item {
-    margin-right: 80px;
   }
 
   .advantages__list .about-list__item:last-child {
