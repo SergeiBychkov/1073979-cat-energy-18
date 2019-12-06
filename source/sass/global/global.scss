@@ -1,9 +1,13 @@
 body {
-  background-color: #ffffff;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
-  margin: 0;
-  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #ffffff;
 }
 
 img {
@@ -24,8 +28,55 @@ ul {
 }
 
 iframe {
+  height: 400px;
   width: 100%;
-  min-height: 362px;
   border: none;
-  frameborder: none;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+@mixin tablet-mix {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin desktop-mix {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin container-mobile {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+@mixin container-tablet {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+@mixin container-desktop {
+  width: 100%;
+  padding-left: 110px;
+  padding-right: 110px;
+  box-sizing: border-box;
+}
+
+@mixin line {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $green;
 }

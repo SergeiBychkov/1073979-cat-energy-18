@@ -1,5 +1,26 @@
+.additional-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 2px solid $border-p;
+
+  & h3 {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.additional-product:last-child {
+  border-bottom: 2px solid $border-p;
+}
+
 .additional-product__btn {
   width: 100%;
+  margin-top: 15px;
+  margin-bottom: 20px;
 
   &:hover {
     transition: 0.3s;
@@ -13,24 +34,116 @@
 }
 
 .product-bonus {
-  background: url("../../img/gift-photo-mobile@1x.jpg") no-repeat;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 15px 0;
+  justify-items: center;
+  position: relative;
+  background: url("../img/gift-photo-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient, $green-gradient);
   min-width: 280px;
   min-height: 290px;
 
-  /*
   &::before {
     content: "";
-    background: url("../../img/icon-gift.svg") no-repeat;
+    background: url("../img/icon-gift.svg") no-repeat;
+    color: $base-color;
     width: 55px;
     height: 60px;
     position: absolute;
+    top: 20%;
     left: 50%;
+    transform: translateX(-50%);
   }
-  */
 }
 
 .product-bonus__text {
+  margin: 0 auto;
+  max-width: 250px;
+  padding: 50px;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: $base-color;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-product {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 2px solid $border-p;
+    border-right: 2px solid $border-p;
+    padding: 15px 38px;
+
+    & h3 {
+      font-size: 20px;
+      line-height: 20px;
+      margin-right: auto;
+    }
+
+    & p {
+      margin-left: 35px;
+    }
+  }
+
+  .product-bonus {
+    flex-direction: row;
+    margin-top: 70px;
+    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat, linear-gradient(to bottom, $green-gradient 69%, $base-color 31%);
+
+    &::before {
+      left: 15%;
+    }
+
+    & p {
+      margin-left: auto;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .additional-product {
+    justify-content: space-between;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+
+    & h3 {
+      margin-right: 0;
+      width: 245px;
+    }
+
+    & p:first-of-type {
+      margin-left: 0;
+      width: 150px;
+    }
+
+    & p:last-of-type {
+      margin-left: 0;
+      width: 100px;
+      text-align: end;
+    }
+  }
+
+  .product-bonus {
+    width: 245px;
+    min-width: auto;
+    margin-top: 0;
+    margin-left: auto;
+    background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+    background-color: $green-gradient;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & .product-bonus__text {
+      padding-top: 170px;
+    }
+  }
+
+  .additional-product__btn {
+    width: 245px;
+  }
 }

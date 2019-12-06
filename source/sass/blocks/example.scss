@@ -3,7 +3,7 @@
   background-color: $light-gray;
 }
 
-.example h2 {
+.example__description h2 {
   margin-top: 0;
   font-size: 36px;
   font-weight: 400;
@@ -16,18 +16,115 @@
   color: $dark-silver;
 }
 
+.example__photo {
+  text-align: center;
+}
+
+.options-list__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: calc(50% - 16px);
+  flex-wrap: wrap;
+  border: 1px solid $border-gr;
+  border-radius: 5%;
+}
+
 .options-list__option {
+  width: 100%;
+  text-align: center;
   font-size: 24px;
   line-height: 24px;
 }
 
 .options-list__description {
+  width: 50px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -25px;
+  padding: 0 15px;
   font-size: 12px;
   line-height: 12px;
+  background-color: $light-gray-back;
 }
 
 .example__text {
+  display: block;
+  text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 20px;
+}
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    @include tablet-mix;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff 57%, #f2f2f2 31%);
+  }
+
+  .options-list {
+    margin: 0;
+    width: 384px;
+  }
+
+  .example__wrapper {
+    padding: 30px;
+  }
+
+  .example__photo img {
+    width: 690px;
+    height: 517px;
+  }
+
+  .options-list__description {
+    margin-top: 7px;
+    margin-bottom: -15px;
+    width: 90px;
+    background-color: $base-color;
+  }
+
+  .example__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .example__text {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    @include desktop-mix;
+    display: flex;
+    padding: 0 110px;
+    background: linear-gradient(to bottom, #ffffff 29%, #f2f2f2 25%);
+  }
+
+  .example__description {
+    width: 570px;
+  }
+
+  .example__photo {
+    width: 570px;
+  }
+
+  .example__description h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .options-list__description {
+    background-color: $light-gray-back;
+  }
 }
