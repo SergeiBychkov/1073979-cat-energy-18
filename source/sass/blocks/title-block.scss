@@ -4,13 +4,16 @@
 
 .title-block__wrapper h1 {
   margin-top: 0;
+  padding-top: 7px;
   font-size: 36px;
+  font-weight: 400;
   line-height: 36px;
   color: $base-color;
 }
 
 .title-block__wrapper p {
   font-size: 14px;
+  text-transform: uppercase;
   line-height: 14px;
   color: $base-color;
 }
@@ -18,15 +21,18 @@
 .title-block {
   position: relative;
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 64%, $base-color 36%);
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61%, $base-color 49%);
 }
 
 .tittle-block__btn {
   display: inline-block;
+  margin-top: 2px;
   box-sizing: border-box;
   text-align: center;
   vertical-align: center;
   width: 100%;
+  font-size: 14px;
+  line-height: 18px;
 
   &:hover {
     transition: 0.3s;
@@ -39,6 +45,10 @@
   }
 }
 
+.title-block__image img {
+  margin-top: 1px;
+}
+
 @media (min-width: $tablet-width) {
   .title-block {
     background: none;
@@ -46,11 +56,12 @@
 
   .title-block__wrapper {
     position: relative;
-    margin-left: 60px;
-    padding: 30px;
+    padding: 0;
   }
 
   .title-block__wrapper h1 {
+    margin-top: 30px;
+    margin-left: 87px;
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
@@ -59,6 +70,7 @@
   }
 
   .title-block__wrapper p {
+    margin-left: 88px;
     font-size: 20px;
     line-height: 20px;
     text-align: start;
@@ -67,8 +79,9 @@
 
   .tittle-block__btn {
     position: absolute;
-    top: 31%;
-    left: 4%;
+    padding: 17px 15px;
+    top: 28.5%;
+    left: 12.5%;
     font-size: 20px;
     line-height: 20px;
     display: block;
@@ -77,7 +90,6 @@
 
   .title-block__image img {
     width: 709px;
-    height: 609px;
   }
 }
 
@@ -89,7 +101,6 @@
 
   .title-block__image img {
     width: 546px;
-    height: 499px;
   }
 
   .tittle-block__btn {

@@ -140,10 +140,10 @@
 
 .additional-list__item {
   margin-bottom: 25px;
+}
 
-  & p {
-    text-align: center;
-  }
+.additional-list__item p {
+  text-align: center;
 }
 
 .input-mail {
@@ -255,9 +255,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
 
-    & .program-form__container {
-      width: calc(50% - 40px);
-    }
+  .program-form__wrapper .program-form__container {
+    width: calc(50% - 40px);
   }
 }

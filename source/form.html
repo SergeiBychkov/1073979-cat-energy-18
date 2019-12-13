@@ -8,19 +8,20 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-<header class="header"><div class="header__wrapper">
-  <a class="header__logo-image" href="#">
-    <picture>
-      <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
-      <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
-    </picture>
-  </a>
-  <a class="header__logo-text" href="#">
-    <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
-  </a>
-  <button class="header-button" type="button">
-    <span class="visually-hidden">открыть меню</span>
-  </button>
+<header class="header">
+  <div class="header__wrapper">
+    <a class="header__logo-image" href="#">
+      <picture>
+        <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+        <img src="img/logo-mobile.png" width="33" height="38" alt="логотип">
+      </picture>
+    </a>
+    <a class="header__logo-text" href="#">
+      <img src="img/logo-mobile-header.png" width="101" height="18" alt="Кэт энерджи">
+    </a>
+    <button class="header-button" type="button">
+      <span class="visually-hidden">открыть меню</span>
+    </button>
   <nav class="navigation">
     <ul class="navigation__list site-list">
       <li class="site-list__item">
@@ -125,9 +126,7 @@
       <p class="contacts__text contacts__text--invite">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
       <p class="contacts__text contacts__text--address">ул. Большая<br> конюшенная, д. 19/8<br> Санкт-Петербург</p>
     </div>
-    <div class="contacts__map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056816!2d30.320853351861462!3d59.93871916896506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574173267974!5m2!1sru!2sru" allowfullscreen=""></iframe>
-    </div>
+      <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056816!2d30.320853351861462!3d59.93871916896506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1574173267974!5m2!1sru!2sru" allowfullscreen=""></iframe>
   </section>
 </main>
 <footer class="footer">
@@ -166,5 +165,7 @@
     </div>
   </div>
 </footer>
+<script src="js/script.js">
+</script>
 </body>
 </html>

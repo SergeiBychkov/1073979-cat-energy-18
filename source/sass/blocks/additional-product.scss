@@ -4,17 +4,17 @@
   justify-content: space-between;
   border-top: 2px solid $border-p;
 
-  & h3 {
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    text-transform: uppercase;
+  &:last-child {
+    border-bottom: 2px solid $border-p;
   }
 }
 
-.additional-product:last-child {
-  border-bottom: 2px solid $border-p;
+.additional-product h3 {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
 .additional-product__btn {
@@ -35,13 +35,13 @@
 
 .product-bonus {
   display: flex;
-  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: flex-end;
   margin: 15px 0;
-  justify-items: center;
   position: relative;
   background: url("../img/gift-photo-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient, $green-gradient);
   min-width: 280px;
-  min-height: 290px;
+  min-height: 289px;
 
   &::before {
     content: "";
@@ -57,9 +57,9 @@
 }
 
 .product-bonus__text {
-  margin: 0 auto;
-  max-width: 250px;
-  padding: 50px;
+  margin-bottom: 30px;
+  padding: 0 75px;
+  max-width: 280px;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
@@ -73,33 +73,29 @@
     border-left: 2px solid $border-p;
     border-right: 2px solid $border-p;
     padding: 15px 38px;
+  }
 
-    & h3 {
-      font-size: 20px;
-      line-height: 20px;
-      margin-right: auto;
-    }
+  .additional-product h3 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: auto;
+  }
 
-    & p {
-      margin-left: 35px;
-    }
+  .additional-product p {
+    margin-left: 35px;
   }
 
   .product-bonus {
-    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     margin-top: 70px;
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat, linear-gradient(to bottom, $green-gradient 69%, $base-color 31%);
 
     &::before {
       left: 15%;
     }
-
-    & p {
-      margin-left: auto;
-    }
   }
 }
-
 
 @media (min-width: $desktop-width) {
   .additional-product {
@@ -107,11 +103,6 @@
     padding: 0;
     border-right: none;
     border-left: none;
-
-    & h3 {
-      margin-right: 0;
-      width: 245px;
-    }
 
     & p:first-of-type {
       margin-left: 0;
@@ -123,6 +114,11 @@
       width: 100px;
       text-align: end;
     }
+  }
+
+  .additional-product h3 {
+    margin-right: 0;
+    width: 245px;
   }
 
   .product-bonus {
@@ -137,10 +133,10 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
 
-    & .product-bonus__text {
-      padding-top: 170px;
-    }
+  .product-bonus .product-bonus__text {
+    padding-top: 170px;
   }
 
   .additional-product__btn {

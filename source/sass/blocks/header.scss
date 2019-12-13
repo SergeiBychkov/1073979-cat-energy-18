@@ -1,11 +1,26 @@
+.header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-height: 66px;
+}
+
 .header-button {
-  padding-right: 20px;
+  margin-top: 23px;
+  margin-right: 20px;
   border: none;
-  margin-top: 10px;
   background: url("../img/icon-close.svg") no-repeat;
-  width: 18px;
+  width: 24px;
   height: 18px;
 }
+
+.header-button-close {
+  border: none;
+  background: url("../img/icon-mobile-menu.svg") no-repeat;
+  width: 24px;
+  height: 18px;
+}
+
 
 .header__logo-image:hover,
 .header__logo-text:hover {
@@ -17,19 +32,14 @@
   opacity: 0.6;
 }
 
-.header__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .header__logo-image {
-  padding-left: 20px;
+  margin-top: 11px;
+  margin-left: 20px;
 }
 
 .header__logo-text {
-  padding-top: 10px;
-  padding-right: 20px;
+  margin-top: 24px;
+  padding-right: 9px;
 }
 
 @media (min-width: $tablet-width) {
@@ -37,7 +47,7 @@
     @include tablet-mix;
     display: flex;
     flex-wrap: wrap;
-    padding: 40px 30px 0 30px;
+    padding: 0 30px;
   }
 
   .header__wrapper {
@@ -45,6 +55,8 @@
   }
 
   .header__logo-image {
+    margin-top: 24px;
+    margin-left: 0;
     padding: 0;
   }
 

@@ -2,6 +2,12 @@
   @include container-mobile;
 }
 
+.filter-program,
+.contacts-list,
+.additional-list {
+  @include list-decoration;
+}
+
 .program-form__btn {
   font-size: 16px;
   line-height: 20px;
@@ -20,24 +26,25 @@
 .form-block {
   margin-bottom: 50px;
   padding-top: 5px;
+}
 
-  & input {
-    box-sizing: border-box;
-    height: 50px;
-  }
+.form-block input {
+  box-sizing: border-box;
+  height: 50px;
 }
 
 .form-block__title {
-  font-size: 33px;
+  margin-top: 11px;
+  margin-bottom: 24px;
+  font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  padding: 0 20px;
 }
 
 .form-block__text {
+  width: 275px;
   font-size: 14px;
   line-height: 18px;
-  padding: 0 20px;
   text-transform: uppercase;
 }
 

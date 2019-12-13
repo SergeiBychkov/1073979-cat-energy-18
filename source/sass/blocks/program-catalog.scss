@@ -11,13 +11,15 @@
 .main-block__title {
   position: relative;
   text-transform: uppercase;
+  margin-top: 14px;
+  padding-left: 12px;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-align: center;
 
   &--second {
-    padding-left: 25px;
+    padding-left: 39px;
   }
 
   &--first::before {
@@ -27,8 +29,8 @@
     width: 35px;
     height: 49px;
     position: absolute;
-    top: -13px;
-    left: 8px;
+    top: -8px;
+    left: 10px;
     z-index: 2;
   }
 
@@ -39,7 +41,8 @@
     width: 67px;
     height: 28px;
     position: absolute;
-    left: -8px;
+    top: 4px;
+    left: -7px;
     z-index: 2;
   }
 
@@ -50,8 +53,8 @@
     background-color: $green;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: 1px;
+    top: -6px;
+    left: 2px;
     z-index: 1;
   }
 
@@ -62,13 +65,16 @@
     background-color: $green;
     border-radius: 50%;
     position: absolute;
-    top: -10px;
-    left: 1px;
+    top: -7px;
+    left: 2px;
     z-index: 1;
   }
 }
 
 .main-block__text {
+  margin-top: 29px;
+  margin-bottom: 41px;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: $dark-silver;
@@ -87,8 +93,8 @@
     width: 24px;
     height: 11px;
     position: absolute;
-    margin-left: 14px;
-    margin-top: 6px;
+    margin-left: 11px;
+    margin-top: 4px;
   }
 
   &:hover::after {
@@ -110,10 +116,12 @@
 @media (min-width: $tablet-width) {
   .program-catalog {
     @include tablet-mix;
-    padding: 30px;
+    padding: 0 30px;
   }
 
   .program-catalog__wrapper {
+    padding-top: 62px;
+    padding-left: 53px;
     padding-right: 50%;
   }
 
@@ -122,6 +130,8 @@
   }
 
   .main-block__title {
+    margin-bottom: 10px;
+    padding: 0;
     font-size: 36px;
     line-height: 37px;
     text-align: start;

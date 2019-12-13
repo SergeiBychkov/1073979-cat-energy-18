@@ -1,10 +1,18 @@
 .about-list {
+  @include list-decoration;
   position: relative;
 }
 
 .about-list__item {
   margin-left: 80px;
-  margin-bottom: 70px;
+  margin-bottom: 26px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   &::before {
     content: "";
@@ -15,18 +23,22 @@
   }
 
   &--leaf::before {
+    top: -3px;
     background: $green url("../img/advantage-leaf@1x.png") no-repeat center;
   }
 
   &--powder::before {
+    top: 77px;
     background: $green url("../img/advantage-powder@1x.png") no-repeat center;
   }
 
   &--dining::before {
+    bottom: 77px;
     background: $green url("../img/advantage-dining@1x.png") no-repeat center;
   }
 
   &--clock::before {
+    bottom: -3px;
     background: $green url("../img/advantage-clock@1x.png") no-repeat center;
   }
 }

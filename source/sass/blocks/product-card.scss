@@ -2,8 +2,16 @@
   border-top: 2px solid $light-gray;
 }
 
+.product-card picture {
+  padding-left: 20px;
+}
+
 .product-card__btn {
-  width: 100%;
+  margin: 0 auto;
+  width: 87.5%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .show-more {
@@ -67,30 +75,36 @@
 .product-card__wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-right: 20px;
+  box-sizing: border-box;
   width: 50%;
-
-  & h3 {
-    width: 75%;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-  }
-
-  & p {
-    width: 50%;
-    margin: 2px 0;
-    font-size: 12px;
-    line-height: 16px;
-  }
 
   & p:nth-child(odd) {
     text-align: end;
   }
 }
 
+.product-card__wrapper h3 {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  width: 60%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.product-card__wrapper p {
+  width: 50%;
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+
 @media (min-width: $tablet-width) {
   .product-card {
-    margin-bottom: 140px;
+    margin-top: 108px;
     padding: 35px;
     width: calc(100% / 12 * 6 - 100px);
     background-color: $light-gray;
@@ -101,28 +115,26 @@
   .product-card__wrapper {
     width: 100%;
     justify-content: center;
+  }
 
-    & h3 {
-      text-align: center;
-    }
+  .product-card__wrapper h3 {
+    text-align: center;
+  }
 
-    & p {
-      border-bottom: 2px solid $border-p;
-    }
+  .product-card__wrapper p {
+    border-bottom: 2px solid $border-p;
   }
 
   .product-card:nth-child(even) img {
     margin-top: -79px;
     width: 324px;
     max-width: 324px;
-    height: 172px;
   }
 
   .product-card:nth-child(odd) img {
     margin-top: -114px;
     width: 324px;
     max-width: 324px;
-    height: 208px;
   }
 
 
@@ -136,7 +148,7 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    margin-top: 30px;
+    margin: 108px 0 30px 0;
     border: none;
     background-color: $base-color;
     box-shadow: inset 0 0 0 2px $light-gray;
