@@ -21,7 +21,7 @@
 .title-block {
   position: relative;
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61%, $base-color 49%);
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 305px, $base-color 108px);
 }
 
 .tittle-block__btn {
@@ -45,12 +45,15 @@
   }
 }
 
-.title-block__image img {
-  margin-top: 1px;
+.title-block__image {
+  margin-top: 29px;
+  margin-bottom: 0;
 }
 
 @media (min-width: $tablet-width) {
   .title-block {
+    @include tablet-mix;
+    @include container-tablet;
     background: none;
   }
 
@@ -59,8 +62,8 @@
     padding: 0;
   }
 
-  .title-block__wrapper h1 {
-    margin-top: 30px;
+  .title-block__text h1 {
+    margin-top: 42px;
     margin-left: 87px;
     font-size: 60px;
     font-weight: 400;
@@ -69,12 +72,16 @@
     color: $black;
   }
 
-  .title-block__wrapper p {
+  .title-block__text p {
     margin-left: 88px;
     font-size: 20px;
     line-height: 20px;
     text-align: start;
     color: $black;
+  }
+
+  .title-block__image {
+    margin-top: 21px;
   }
 
   .tittle-block__btn {
@@ -94,9 +101,19 @@
 }
 
 @media (min-width: $desktop-width) {
+  .title-block {
+    @include desktop-mix;
+    @include container-tablet;
+  }
+
   .title-block__wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .title-block__image {
+    margin-top: 24px;
+    margin-left: -40px;
   }
 
   .title-block__image img {
@@ -104,7 +121,16 @@
   }
 
   .tittle-block__btn {
-    top: 45%;
-    left: 2%;
+    top: 64.1%;
+    left: 7.3%;
+  }
+
+  .title-block__text h1 {
+    margin-top: 94px;
+    margin-left: 90px;
+  }
+
+  .title-block__text p {
+    margin-left: 91px;
   }
 }

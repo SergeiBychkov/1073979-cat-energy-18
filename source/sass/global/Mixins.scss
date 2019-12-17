@@ -7,7 +7,7 @@
 
 @mixin desktop-mix {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -26,10 +26,17 @@
   box-sizing: border-box;
 }
 
+@mixin container-tablet-form {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 70px;
+  box-sizing: border-box;
+}
+
 @mixin container-desktop {
   width: 100%;
-  padding-left: 110px;
-  padding-right: 110px;
+  padding-left: 40px;
+  padding-right: 40px;
   box-sizing: border-box;
 }
 
@@ -45,4 +52,12 @@
 @mixin list-decoration {
   list-style: none;
   padding-left: 0;
+}
+
+@mixin numbers-after {
+  position: absolute;
+  color: $light-gray;
+  font-size: 281px;
+  z-index: -1;
+  font-family: "oswald", sans-serif;
 }

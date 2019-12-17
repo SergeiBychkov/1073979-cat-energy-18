@@ -43,15 +43,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .header {
+  .header__wrapper {
     @include tablet-mix;
+    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 30px;
-  }
-
-  .header__wrapper {
-    width: 100%;
   }
 
   .header__logo-image {
@@ -78,12 +74,20 @@
 
 @media (min-width: $desktop-width) {
   .header {
+    padding-bottom: 54px;
+  }
+
+  .header__wrapper {
     @include desktop-mix;
-    padding: 40px 110px 0 110px;
+    @include container-desktop;
   }
 
   .header-index {
     background: url("../img/index-background-desktop@1x.jpg") top right no-repeat, linear-gradient(to right, $base-color 50%, $green-gradient 50%);
+  }
+
+  .header__logo-image {
+    margin-top: 55px;
   }
 
   .header__logo-image img {

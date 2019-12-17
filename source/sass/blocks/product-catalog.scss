@@ -1,8 +1,11 @@
 
 .product-catalog__title {
-  margin-top: 15px;
-  margin-bottom: 27px;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 27px;
   padding-left: 20px;
+  border-top: 2px solid $border-base;
+  border-bottom: 2px solid $border-base;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
@@ -22,19 +25,23 @@
     padding: 0 30px;
   }
 
-  .product-catalog h2 {
+  .product-catalog__title {
+    margin-top: 36px;
+    padding-left: 0;
     width: 100%;
     font-size: 60px;
     line-height: 60px;
-  }
-
-  .product-catalog__title {
-    padding-left: 0;
+    border: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .product-catalog {
     @include desktop-mix;
+    @include container-desktop;
+  }
+
+  .product-catalog__title {
+    margin-top: 0;
   }
 }
