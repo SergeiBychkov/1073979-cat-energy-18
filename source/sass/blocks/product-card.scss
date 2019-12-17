@@ -36,6 +36,16 @@
   font-size: 16px;
   font-family: "oswald", sans-serif;
   line-height: 20px;
+
+  &:hover {
+    transition: 0.3s;
+    background-color: $green-hvr;
+  }
+
+  &:active {
+    transition: 0.3s;
+    color: $base-color-03;
+  }
 }
 
 .product-card__img {
@@ -84,7 +94,16 @@
   font-family: "oswald", sans-serif;
   line-height: 20px;
   color: $black;
-  background-color: $border-base;
+  background-color: $light-gray;
+
+  &:hover {
+    background-color: $light-gray-modify;
+  }
+
+  &:active {
+    color: $black-03;
+    background-color: $light-gray-modify;
+  }
 }
 
 @media (min-width: $tablet-width) {
