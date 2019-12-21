@@ -56,49 +56,36 @@
   }
 }
 
-.footer__copyright {
-  color: $black;
-
-  &--text {
-    margin-top: 13px;
-    margin-right: 18px;
-    font-size: 16px;
-    font-family: "Arial", sans-serif;
-    line-height: 16px;
-  }
-
-  &--text:hover {
-    transition: 0.3s;
-    color: $green;
-  }
-
-  &--text:active {
-    transition: 0.3s;
-    color: $green-active;
-  }
-
-  &--logo {
-    margin-top: 7px;
-  }
+.copyright-block {
+  padding: 15px 0;
 }
 
-.footer__copyright:hover {
+.copyright-block__link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright-block__text {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  line-height: 16px;
+  color: $black;
+}
+
+.copyright-block__link:hover {
   & path {
     transition: 0.3s;
     fill: $green;
   }
 }
 
-.footer__copyright:active {
-  & path {
-    transition: 0.3s;
-    fill: $green-active;
-  }
+.copyright-block__link:active {
+  transition: 0.3s;
+  opacity: 0.3;
 }
 
-.footer__copyright-wrapper {
-  display: flex;
-  justify-content: space-between;
+.copyright-block__picture {
+  margin-right: -6px;
 }
 
 @media (min-width: $tablet-width) {
@@ -119,8 +106,9 @@
   .social-links {
     box-sizing: border-box;
     margin: 0;
-    padding: 0 0 0 16px;
+    padding: 0 0 0 20px;
     width: 25%;
+    max-width: 25%;
     border: none;
   }
 
@@ -132,27 +120,30 @@
     }
   }
 
-  .footer__copyright-wrapper {
-    margin-top: -16px;
-  }
-
   .social-links__icon--vk {
     width: 30px;
     height: 16px;
   }
 
   .social-links__icon--inst {
+    margin-top: -4px;
     width: 23px;
     height: 23px;
   }
 
   .social-links__icon--fcb {
+    margin-top: -7px;
     width: 14px;
     height: 28px;
   }
 
-  .footer__copyright--text {
-    margin-right: 8px;
+  .copyright-block__text {
+    margin-top: 8px;
+    margin-right: 17px;
+  }
+
+  .copyright-block__picture {
+    margin-top: -3px;
   }
 }
 
@@ -160,21 +151,19 @@
   .footer__wrapper {
     @include desktop-mix;
     @include container-desktop;
-    align-content: start;
   }
 
   .footer__item {
-    margin-top: 43px;
+    margin: 0;
   }
 
   .social-links {
     justify-content: flex-start;
-    margin-top: 47px;
     margin-left: 126px;
     padding-left: 36px;
   }
 
-  .footer__copyright-wrapper {
-    margin-top: 39px;
+  .copyright-block__link {
+    margin-top: 10px;
   }
 }

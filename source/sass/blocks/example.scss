@@ -154,7 +154,7 @@
     width: 100%;
     height: 461px;
     background: linear-gradient(to right, $light-gray 50%, $grey-back 50%);
-    z-index: -1;
+    z-index: -15;
   }
 
   .example h2 {
@@ -247,7 +247,7 @@
     &:active {
       transition: 0.3s;
       border: 1px solid $green;
-      box-shadow: 0 2px 2px 0 $border-p;
+      box-shadow: 0 2px 2px 1px $border-p;
     }
   }
 
@@ -298,6 +298,7 @@
   .photo-block {
     @include container-tablet;
     @include tablet-mix;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
@@ -410,6 +411,16 @@
     margin-top: -150px;
     width: 50%;
     padding: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -77px;
+      width: 610px;
+      height: 465px;
+      background: linear-gradient(to right, #f2f2f2 53%, #eaeaea 53%);
+      z-index: -1;
+    }
   }
 
   .photo-block__cat--first {

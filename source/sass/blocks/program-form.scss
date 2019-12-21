@@ -48,6 +48,21 @@
   }
 }
 
+.label-mail,
+.label-phone {
+  position: relative;
+}
+
+.label-mail__icon {
+  position: absolute;
+  right: 16px;
+}
+
+.label-phone__icon {
+  position: absolute;
+  right: 13px;
+}
+
 .program-field__text {
   flex-shrink: 0;
   margin-right: 13px;
@@ -57,7 +72,7 @@
   margin-right: 9px;
 }
 
-.information-field__input {
+.program-field__input {
   padding: 0 15px 3px;
   width: 100%;
   min-height: 40px;
@@ -65,23 +80,39 @@
   border: 2px solid $border-base;
 
   &:hover {
+    transition: 0.3s;
     border: 2px solid $border-p;
   }
 
   &:active {
+    transition: 0.3s;
     border: 2px solid $black;
-  }
-
-  &:invalid {
-    border: 2px solid $input-error-border;
   }
 
   &:focus {
     outline: none;
+    border: 2px solid $black;
+  }
+
+  &:invalid {
+    transition: 0.3s;
+    border: 2px solid $input-error-border;
   }
 }
 
-.information-field__radio-label:active {
+.program-field__input:focus + .label-mail__icon,
+.program-field__input:focus + .label-phone__icon {
+  transition: 0.3s;
+  fill: $green;
+}
+
+.program-field__input:invalid + .label-mail__icon,
+.program-field__input:invalid + .label-phone__icon {
+  transition: 0.3s;
+  fill: $input-error-border;
+}
+
+.program-form__radio-label:active {
   transition: 0.3s;
   opacity: 0.3;
 }
@@ -101,11 +132,7 @@
   opacity: 0.3;
 }
 
-.input-mail:hover::after {
-  fill: $green;
-}
-
-.program-form__contacts .information-field__input {
+.program-form__contacts .program-field__input {
   padding: 0 35px 3px 15px;
 }
 
@@ -176,7 +203,7 @@
   margin-bottom: 25px;
 }
 
-.information-field__radio-label {
+.program-form__radio-label {
   position: relative;
   padding-left: 45px;
   font-size: 16px;
@@ -245,32 +272,6 @@
 
 .additional-list__item p {
   text-align: center;
-}
-
-.input-mail {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 5%;
-    background: url("../img/icon-mail.svg") no-repeat;
-    width: 17px;
-    height: 13px;
-  }
-}
-
-.input-phone {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 4%;
-    background: url("../img/icon-phone.svg") no-repeat;
-    width: 20px;
-    height: 20px;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -374,11 +375,11 @@
     margin-right: 18px;
   }
 
-  .information-field__input {
+  .program-field__input {
     min-height: 45px;
   }
 
-  .information-field__radio-label {
+  .program-form__radio-label {
     padding-left: 61px;
   }
 
@@ -420,19 +421,19 @@
     margin-right: 16px;
   }
 
-  .input-mail::after {
-    right: 2.5%;
-  }
-
-  .input-phone::after {
-    right: 2%;
-  }
-
   .program-form__comment-field {
     margin-top: 39px;
     padding-bottom: 72px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .label-mail__icon {
+    top: 21px;
+  }
+
+  .label-phone__icon {
+    top: 18px;
   }
 }
 
@@ -477,6 +478,23 @@
     padding-top: 10px;
   }
 
+  .label-mail {
+    width: calc(50% - 40px);
+  }
+
+  .label-phone {
+    margin-top: 18px;
+    width: calc(50% - 40px);
+  }
+
+  .label-mail__icon {
+    right: 20px;
+  }
+
+  .label-phone__icon {
+    right: 19px;
+  }
+
   .program-form__wrapper .program-form__container {
     width: calc(50% - 40px);
   }
@@ -497,27 +515,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-
-  .input-mail {
-    width: calc(50% - 40px);
-
-    &::after {
-      right: 3.5%;
-    }
-  }
-
-  .input-phone {
-    margin-top: 18px;
-    width: calc(50% - 40px);
-
-    &::after {
-      right: 3%;
-    }
-  }
-
-  .input-mail .program-field__text {
-    margin-right: 21px;
   }
 
   .program-form__container--line::after {
