@@ -1,21 +1,29 @@
 .contacts__wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
+  flex-wrap: wrap;
+  padding: 20px 20px 10px 20px;
 }
 
 .contacts__text--invite {
+  margin-top: 8px;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
 }
 
 .contacts__text--address {
+  margin-top: 8px;
+  padding-right: 5px;
   font-size: 14px;
+  font-family: "Arial", sans-serif;
   line-height: 20px;
 }
 
 .contacts__map {
+  height: 400px;
+  width: 100%;
+  border: none;
   overflow: hidden;
   min-height: 362px;
   background: url("../img/bg-map-mobile@1x.png") no-repeat;
@@ -29,39 +37,65 @@
 @media (min-width: $tablet-width) {
   .contacts__wrapper {
     @include tablet-mix;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 30px 71px 41px;
   }
 
   .contacts__map {
     min-height: 396px;
     background: url("../img/bg-map-tablet@1x.png") no-repeat;
   }
+
+  .contacts__text--invite {
+    margin-top: 34px;
+    margin-left: 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__text--address {
+    margin-top: 33px;
+    padding: 0;
+    font-size: 16px;
+    text-align: end;
+  }
+
+  .contacts__text--city {
+    display: block;
+    margin-top: 18px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .contacts {
     position: relative;
-    padding: 112px 0;
+    padding: 93px 0 105px 0;
   }
 
   .contacts__wrapper {
     position: relative;
     z-index: 2;
     margin-left: 110px;
+    padding: 30px 76px 41px;
     background-color: $base-color;
-    max-width: 510px;
-
-    & .contacts__text--invite {
-      font-size: 20px;
-      line-height: 25px;
-    }
-
-    & .contacts__text--address {
-      font-size: 16px;
-      line-height: 20px;
-    }
+    max-width: 570px;
   }
 
+  .contacts__text--invite {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__text--address {
+    margin-right: 15px;
+    text-align: start;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .contacts__text--city {
+    margin-top: 21px;
+  }
 
   .contacts__map {
     position: absolute;

@@ -1,8 +1,9 @@
 .content-block {
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .content-block__title {
+  margin-top: 0;
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
@@ -11,7 +12,7 @@
 @media (min-width: $tablet-width) {
   .content-block {
     @include tablet-mix;
-    padding: 30px;
+    padding: 15px 30px 0;
   }
 
   .content-block__title {
@@ -23,7 +24,17 @@
 @media (min-width: $desktop-width) {
   .content-block {
     @include desktop-mix;
-    padding: 0 110px;
-    min-height: 415px;
+    @include container-desktop;
+  }
+
+  .content-block__title {
+    margin-top: 29px;
+  }
+
+  .example .content-block__title {
+    @include desktop-mix;
+    @include container-desktop;
+    margin-top: 17px;
+    margin-bottom: 15px;
   }
 }

@@ -1,0 +1,63 @@
+@mixin tablet-mix {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin desktop-mix {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin container-mobile {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+@mixin container-tablet {
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+@mixin container-tablet-form {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 70px;
+  box-sizing: border-box;
+}
+
+@mixin container-desktop {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+@mixin line {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $green;
+}
+
+@mixin list-decoration {
+  list-style: none;
+  padding-left: 0;
+}
+
+@mixin numbers-after {
+  position: absolute;
+  color: $light-gray;
+  font-size: 281px;
+  z-index: -1;
+  font-family: "oswald", sans-serif;
+}

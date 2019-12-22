@@ -2,6 +2,12 @@
   @include container-mobile;
 }
 
+.filter-program,
+.contacts-list,
+.additional-list {
+  @include list-decoration;
+}
+
 .program-form__btn {
   font-size: 16px;
   line-height: 20px;
@@ -18,42 +24,50 @@
 }
 
 .form-block {
-  margin-bottom: 50px;
+  margin-bottom: 8px;
   padding-top: 5px;
-
-  & input {
-    box-sizing: border-box;
-    height: 50px;
-  }
 }
 
 .form-block__title {
-  font-size: 33px;
+  margin-top: 9px;
+  margin-bottom: 26px;
+  font-size: 36px;
   line-height: 60px;
   font-weight: 400;
-  padding: 0 20px;
 }
 
 .form-block__text {
+  width: 250px;
   font-size: 14px;
   line-height: 18px;
-  padding: 0 20px;
   text-transform: uppercase;
 }
 
 
 @media (min-width: $tablet-width) {
+  .form-block {
+    margin-bottom: 63px;
+  }
+
   .form-block__container {
     @include tablet-mix;
     @include container-tablet;
+    margin-bottom: 43px;
   }
 
   .form-block__title {
+    margin-top: 44px;
+    margin-bottom: 54px;
     padding-left: 0;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .form-block__text {
-    width: 245px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    width: 325px;
   }
 }
 
@@ -62,11 +76,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 75px;
   }
 
   .form-block__container {
     @include desktop-mix;
     @include container-desktop;
+  }
+
+  .form-block__title {
+    margin-top: 8px;
   }
 
   .form-block__text {
