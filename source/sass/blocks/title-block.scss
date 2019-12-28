@@ -4,7 +4,10 @@
 
 .title-block__wrapper h1 {
   margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 7px;
+  max-width: 280px;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
@@ -21,7 +24,7 @@
 .title-block {
   position: relative;
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 305px, $base-color 108px);
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61.2%, $base-color 61.2%);
 }
 
 .tittle-block__btn {
@@ -29,7 +32,7 @@
   margin-top: 2px;
   box-sizing: border-box;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
   width: 100%;
   font-size: 14px;
   line-height: 18px;
@@ -54,6 +57,7 @@
   .title-block {
     @include tablet-mix;
     @include container-tablet;
+    min-height: 817px;
     background: none;
   }
 
@@ -65,6 +69,7 @@
   .title-block__text h1 {
     margin-top: 42px;
     margin-left: 87px;
+    max-width: 450px;
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
@@ -81,14 +86,15 @@
   }
 
   .title-block__image {
-    margin-top: 21px;
+    position: absolute;
+    z-index: -1;
+    margin-top: 2px;
   }
 
   .tittle-block__btn {
-    position: absolute;
+    margin-top: 48px;
+    margin-left: 89px;
     padding: 17px 15px;
-    top: 28.5%;
-    left: 12.5%;
     font-size: 20px;
     line-height: 20px;
     display: block;
@@ -104,16 +110,13 @@
   .title-block {
     @include desktop-mix;
     @include container-tablet;
-  }
-
-  .title-block__wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    min-height: 425px;
   }
 
   .title-block__image {
-    margin-top: 24px;
-    margin-left: -40px;
+    z-index: 0;
+    top: -73px;
+    right: 231px;
   }
 
   .title-block__image img {
@@ -121,16 +124,17 @@
   }
 
   .tittle-block__btn {
-    top: 64.1%;
-    left: 7.3%;
+    margin-top: 53px;
   }
 
   .title-block__text h1 {
+    max-width: 450px;
     margin-top: 94px;
     margin-left: 90px;
   }
 
   .title-block__text p {
     margin-left: 91px;
+    max-width: 450px;
   }
 }

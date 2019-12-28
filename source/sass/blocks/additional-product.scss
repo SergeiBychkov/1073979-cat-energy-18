@@ -45,10 +45,13 @@
 .product-bonus {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: stretch;
   position: relative;
+  box-sizing: border-box;
   margin: 39px 0 35px;
+  padding-top: 170px;
   background: url("../img/gift-photo-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient, $green-gradient);
+  background-size: cover;
   min-width: 280px;
   min-height: 289px;
 
@@ -59,14 +62,13 @@
     width: 55px;
     height: 60px;
     position: absolute;
-    top: 23%;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
 .product-bonus__text {
-  margin-bottom: 42px;
   max-width: 280px;
   text-align: center;
   font-size: 16px;
@@ -99,10 +101,11 @@
 
   .product-bonus {
     justify-content: flex-end;
-    align-items: flex-start;
     margin: 70px 0 0 0;
-    min-height: 275px;
-    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat, linear-gradient(to bottom, $green-gradient 69%, $base-color 31%);
+    padding-top: 55px;
+    min-height: 200px;
+    background: $green-gradient url("../img/gift-photo-tablet@1x.jpg") no-repeat;
+    background-size: cover;
 
     &::before {
       left: 17%;
@@ -110,7 +113,6 @@
   }
 
   .product-bonus__text {
-    margin-top: 71px;
     margin-right: 124px;
     text-align: start;
   }
@@ -157,14 +159,14 @@
 
   .product-bonus {
     justify-content: center;
-    align-items: flex-end;
     margin-top: 51px;
     margin-left: 79px;
+    padding-top: 185px;
     width: 245px;
     min-width: auto;
     min-height: auto;
-    background: url("../img/gift-photo-desktop@1x.jpg") no-repeat;
-    background-color: $green-gradient;
+    background: $green-gradient url("../img/gift-photo-desktop@1x.jpg") no-repeat;
+    background-size: cover;
 
     &::before {
       left: 50%;

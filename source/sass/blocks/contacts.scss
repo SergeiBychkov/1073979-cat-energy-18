@@ -5,23 +5,31 @@
   padding: 20px 20px 10px 20px;
 }
 
-.contacts__text--invite {
-  margin-top: 8px;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
+.contacts__text {
+  max-width: 50%;
 
-.contacts__text--address {
-  margin-top: 8px;
-  padding-right: 5px;
-  font-size: 14px;
-  font-family: "Arial", sans-serif;
-  line-height: 20px;
+  &--invite {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &--address {
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding-right: 5px;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+    line-height: 20px;
+  }
+
+  &--city {
+    max-width: 100%;
+  }
 }
 
 .contacts__map {
-  height: 400px;
   width: 100%;
   border: none;
   overflow: hidden;
@@ -46,23 +54,28 @@
     background: url("../img/bg-map-tablet@1x.png") no-repeat;
   }
 
-  .contacts__text--invite {
-    margin-top: 34px;
-    margin-left: 0;
-    font-size: 20px;
-    line-height: 25px;
-  }
+  .contacts__text {
+    max-width: calc(50% - 30px);
 
-  .contacts__text--address {
-    margin-top: 33px;
-    padding: 0;
-    font-size: 16px;
-    text-align: end;
-  }
+    &--invite {
+      margin-top: 34px;
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 25px;
+    }
 
-  .contacts__text--city {
-    display: block;
-    margin-top: 18px;
+    &--address {
+      margin-top: 33px;
+      padding: 0;
+      font-size: 16px;
+      text-align: end;
+    }
+
+    &--city {
+      display: block;
+      margin-top: 20px;
+      max-width: 100%;
+    }
   }
 }
 
@@ -76,7 +89,7 @@
     position: relative;
     z-index: 2;
     margin-left: 110px;
-    padding: 30px 76px 41px;
+    padding: 32px 76px 41px;
     background-color: $base-color;
     max-width: 570px;
   }

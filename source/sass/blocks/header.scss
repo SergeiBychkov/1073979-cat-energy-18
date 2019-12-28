@@ -83,7 +83,17 @@
   }
 
   .header-index {
-    background: url("../img/index-background-desktop@1x.jpg") top right no-repeat, linear-gradient(to right, $base-color 50%, $green-gradient 50%);
+    background: url("../img/index-background-desktop@1x.jpg") top right no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      width: 50%;
+      height: 694px;
+      background-color: $green-gradient;
+    }
   }
 
   .header__logo-image {
