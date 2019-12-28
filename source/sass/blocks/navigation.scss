@@ -60,7 +60,7 @@
   .navigation__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    max-width: 460px;
   }
 
   .site-list__item {
@@ -75,13 +75,9 @@
 }
 
 @media (min-width: $desktop-width) {
-  .navigation__list {
-    justify-content: flex-end;
-  }
-
   .site-list {
     margin-top: 52px;
-    width: 570px;
+    max-width: 570px;
   }
 
   .site-list__item {

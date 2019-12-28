@@ -55,7 +55,11 @@
 }
 
 @mixin numbers-after {
+  counter-increment: list;
+  content: counter(list) "";
   position: absolute;
+  bottom: 70px;
+  right: 78px;
   color: $light-gray;
   font-size: 281px;
   z-index: -1;
