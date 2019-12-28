@@ -38,6 +38,39 @@
   }
 }
 
+@media (min-resolution: $retina) {
+  .about-list__item {
+    &::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: -3px;
+      left: -80px;
+    }
+
+    &--leaf::before {
+      background: $green url("../img/advantage-leaf@2x.png") no-repeat center;
+      background-size: 50px;
+    }
+
+    &--powder::before {
+      background: $green url("../img/advantage-powder@2x.png") no-repeat center;
+      background-size: 50px;
+    }
+
+    &--dining::before {
+      background: $green url("../img/advantage-dining@2x.png") no-repeat center;
+      background-size: 50px;
+    }
+
+    &--clock::before {
+      background: $green url("../img/advantage-clock@2x.png") no-repeat center;
+      background-size: 50px;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .about-list {
     display: flex;
