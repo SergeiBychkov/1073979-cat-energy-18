@@ -24,7 +24,14 @@
 .title-block {
   position: relative;
   text-align: center;
-  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61.2%, $base-color 61.2%);
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61.3%, $base-color 61.3%);
+}
+
+@media (min-resolution: $retina) {
+  .title-block {
+    background: url("../img/index-background-mobile@2x.jpg") top center no-repeat, linear-gradient(to bottom, $green-gradient 61.3%, $base-color 61.3%);
+    background-size: 320px;
+  }
 }
 
 .tittle-block__btn {

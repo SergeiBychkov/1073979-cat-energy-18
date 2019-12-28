@@ -96,6 +96,13 @@
     }
   }
 
+  @media (min-resolution: $retina) {
+    .header-index {
+      background: url("../img/index-background-desktop@2x.jpg") top right no-repeat;
+      background-size: 720px;
+    }
+  }
+
   .header__logo-image {
     margin-top: 55px;
   }
