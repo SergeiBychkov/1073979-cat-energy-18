@@ -100,6 +100,7 @@
   }
 
   &:disabled {
+    border: 2px solid $border-base;
     background-color: $input-disabled;
   }
 }
@@ -151,6 +152,21 @@
   padding: 10px 10px 82px 10px;
   box-sizing: border-box;
   border: 2px solid $border-base;
+
+  &:hover {
+    transition: 0.3s;
+    border: 2px solid $border-p;
+  }
+
+  &:active {
+    transition: 0.3s;
+    border: 2px solid $black;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $black;
+  }
 }
 
 .program-form__btn {
@@ -236,6 +252,10 @@
 .input-radio:disabled + label::after,
 .input-radio:disabled + .program-form__radio-label {
   opacity: 0.3;
+}
+
+.input-radio:disabled + label::before {
+  border: 2px solid $border-p;
 }
 
 .product-name {
