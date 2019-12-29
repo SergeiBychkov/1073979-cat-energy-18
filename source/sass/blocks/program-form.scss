@@ -122,15 +122,6 @@
   border: 2px solid $border-p;
 }
 
-.input-radio + label:active::before {
-  transition: 0.3s;
-  opacity: 0.3;
-}
-
-.input-radio:checked + label:active::after {
-  transition: 0.3s;
-  opacity: 0.3;
-}
 
 .program-form__contacts .program-input {
   padding: 0 35px 3px 15px;
