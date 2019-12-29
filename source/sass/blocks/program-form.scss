@@ -291,6 +291,10 @@
     line-height: 20px;
   }
 
+  .label-mail .program-input {
+    padding-left: 23px;
+  }
+
   .program-form__field {
     @include tablet-mix;
     @include container-tablet-form;
