@@ -72,11 +72,9 @@
   color: $black;
 }
 
-.copyright-block__link:hover {
-  & path {
-    transition: 0.3s;
-    fill: $green;
-  }
+.copyright-block__link:hover .copyright-block__picture {
+  transition: 0.3s;
+  color: $green;
 }
 
 .copyright-block__link:active {
@@ -86,6 +84,7 @@
 
 .copyright-block__picture {
   margin-right: -6px;
+  color: $logo-color;
 }
 
 @media (min-width: $tablet-width) {

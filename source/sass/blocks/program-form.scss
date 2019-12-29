@@ -98,6 +98,11 @@
     transition: 0.3s;
     border: 2px solid $input-error-border;
   }
+
+  &:disabled {
+    border: 2px solid $border-base;
+    background-color: $input-disabled;
+  }
 }
 
 .program-input:focus + .label-mail__icon,
@@ -110,11 +115,6 @@
 .program-input:invalid + .label-phone__icon {
   transition: 0.3s;
   fill: $input-error-border;
-}
-
-.program-form__radio-label:active {
-  transition: 0.3s;
-  opacity: 0.3;
 }
 
 .input-radio + label:hover::before {
@@ -152,6 +152,21 @@
   padding: 10px 10px 82px 10px;
   box-sizing: border-box;
   border: 2px solid $border-base;
+
+  &:hover {
+    transition: 0.3s;
+    border: 2px solid $border-p;
+  }
+
+  &:active {
+    transition: 0.3s;
+    border: 2px solid $black;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $black;
+  }
 }
 
 .program-form__btn {
@@ -233,6 +248,16 @@
   border-radius: 50%;
 }
 
+.input-radio:disabled + label::before,
+.input-radio:disabled + label::after,
+.input-radio:disabled + .program-form__radio-label {
+  opacity: 0.3;
+}
+
+.input-radio:disabled + label::before {
+  border: 2px solid $border-p;
+}
+
 .product-name {
   position: relative;
   padding-left: 45px;
@@ -253,6 +278,12 @@
   width: 28px;
   height: 28px;
   border: 1px solid $border-base;
+}
+
+.checkbox-control:disabled + label::before,
+.checkbox-control:disabled + label::after,
+.checkbox-control:disabled + .product-name {
+  opacity: 0.3;
 }
 
 .checkbox-control:checked + label::after {
@@ -278,6 +309,10 @@
   .program-form input {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .label-mail .program-input {
+    padding-left: 23px;
   }
 
   .program-form__field {
