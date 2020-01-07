@@ -39,6 +39,7 @@
   .product-catalog {
     @include desktop-mix;
     @include container-desktop;
+    justify-content: flex-start;
   }
 
   .product-catalog__title {

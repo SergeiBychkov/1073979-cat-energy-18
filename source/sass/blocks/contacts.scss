@@ -69,7 +69,7 @@
   }
 
   .contacts__text {
-    max-width: calc(50% - 30px);
+    max-width: 160px;
 
     &--invite {
       margin-top: 34px;
@@ -99,16 +99,22 @@
     padding: 93px 0 105px 0;
   }
 
+  .contacts__container {
+    @include desktop-mix;
+    padding-left: 40px;
+  }
+
   .contacts__wrapper {
     position: relative;
     z-index: 2;
-    margin-left: 110px;
-    padding: 32px 76px 41px;
+    margin: 0;
+    padding: 32px 70px 41px;
     background-color: $base-color;
     max-width: 570px;
   }
 
   .contacts__text--invite {
+    padding-left: 5px;
     font-size: 20px;
     line-height: 25px;
   }

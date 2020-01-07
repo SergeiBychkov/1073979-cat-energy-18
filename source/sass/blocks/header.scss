@@ -6,6 +6,8 @@
 }
 
 .header-button {
+  opacity: 1;
+  transition: 0.3s;
   margin-top: 23px;
   margin-right: 20px;
   border: none;
@@ -21,14 +23,20 @@
   height: 18px;
 }
 
+.header-button-hide {
+  opacity: 0;
+  pointer-events: none;
+}
 
 .header__logo-image:hover,
 .header__logo-text:hover {
+  transition: 0.3s;
   opacity: 0.8;
 }
 
 .header__logo-image:active,
 .header__logo-text:active {
+  transition: 0.3s;
   opacity: 0.6;
 }
 
@@ -82,24 +90,23 @@
     @include container-desktop;
   }
 
-  .header-index {
-    background: url("../img/index-background-desktop@1x.jpg") top right no-repeat;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      z-index: -1;
-      width: 50%;
-      height: 695px;
-      background-color: $green-gradient;
-    }
+  .header-index::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    width: 50%;
+    height: 695px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: auto 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-color: $green-gradient;
   }
 
   @media (min-resolution: $retina) {
-    .header-index {
-      background: url("../img/index-background-desktop@2x.jpg") top right no-repeat;
-      background-size: 720px;
+    .header-index::before {
+      background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
 

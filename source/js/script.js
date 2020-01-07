@@ -5,6 +5,7 @@ var breakpoint = 768;
 var closeNavigation = function () {
   if(window.innerWidth < breakpoint){
     navigation.classList.add("navigation-close");
+    button.classList.remove("header-button-hide");
     button.classList.add("header-button-close");
   }
 };
@@ -14,10 +15,12 @@ closeNavigation();
 window.addEventListener('resize', function () {
   if(window.innerWidth < breakpoint){
     navigation.classList.add("navigation-close");
+    button.classList.remove("header-button-hide");
     button.classList.add("header-button-close");
   }
   else {
     navigation.classList.remove("navigation-close");
+    button.classList.add("header-button-hide");
     button.classList.remove("header-button-close");
   }
 });

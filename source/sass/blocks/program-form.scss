@@ -6,7 +6,7 @@
 
 .program-form label,
 .program-form input {
-  font-family: "oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
 }
@@ -117,12 +117,6 @@
   fill: $input-error-border;
 }
 
-.input-radio + label:hover::before {
-  transition: 0.3s;
-  border: 2px solid $border-p;
-}
-
-
 .program-form__contacts .program-input {
   padding: 0 35px 3px 15px;
 }
@@ -137,7 +131,7 @@
   margin: 10px 0;
   width: 100%;
   font-size: 16px;
-  font-family: "oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   padding: 10px 10px 82px 10px;
@@ -215,6 +209,11 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  &:active {
+    transition: 0.3s;
+    opacity: 0.3;
+  }
 }
 
 .input-radio + label::before {
@@ -226,6 +225,11 @@
   height: 27px;
   border: 2px solid $border-base;
   border-radius: 50%;
+}
+
+.input-radio + label:hover::before {
+  transition: 0.3s;
+  border: 2px solid $border-p;
 }
 
 .input-radio:checked + label::after {
@@ -246,7 +250,7 @@
 }
 
 .input-radio:disabled + label::before {
-  border: 2px solid $border-p;
+  border: 2px solid $border-base;
 }
 
 .product-name {
@@ -259,6 +263,11 @@
   &:first-of-type {
     margin-top: 40px;
   }
+
+  &:active {
+    transition: 0.3s;
+    opacity: 0.3;
+  }
 }
 
 .checkbox-control + label::before {
@@ -268,13 +277,19 @@
   left: 0;
   width: 28px;
   height: 28px;
-  border: 1px solid $border-base;
+  border: 1px solid $border-p;
 }
 
-.checkbox-control:disabled + label::before,
-.checkbox-control:disabled + label::after,
+.checkbox-control + label:hover::before {
+  border: 1px solid $grey73;
+}
+
 .checkbox-control:disabled + .product-name {
   opacity: 0.3;
+}
+
+.checkbox-control:disabled + .product-name::before {
+  border: 1px solid $border-p;
 }
 
 .checkbox-control:checked + label::after {
@@ -449,6 +464,7 @@
   .program-form__comment-field {
     margin-top: 39px;
     padding-bottom: 72px;
+    overflow: auto;
     font-size: 20px;
     line-height: 30px;
   }
