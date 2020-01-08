@@ -1565,14 +1565,16 @@ a {
       flex-wrap: wrap;
   margin-top: 29px;
   padding: 23px 20px 19px 8px; }
-  .social-links__icon:hover {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    fill: #68b738; }
-  .social-links__icon:active {
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    fill: rgba(94, 170, 47, 0.3); }
+
+.social-links__item:hover .social-links__icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: #68b738; }
+
+.social-links__item:active .social-links__icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  fill: rgba(94, 170, 47, 0.3); }
 
 .social-links a {
   margin-right: 38px; }
@@ -1635,6 +1637,9 @@ a {
     margin: 0;
     padding-top: 22px; }
   .social-links {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     margin: 0;
@@ -1792,7 +1797,7 @@ a {
     height: 695px;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-size: auto 100%;
-    background-position: right bottom;
+    background-position: left bottom;
     background-repeat: no-repeat;
     background-color: #65a93c; } }
 

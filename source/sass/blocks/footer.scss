@@ -36,16 +36,16 @@
   flex-wrap: wrap;
   margin-top: 29px;
   padding: 23px 20px 19px 8px;
+}
 
-  &__icon:hover {
-    transition: 0.3s;
-    fill: $green;
-  }
+.social-links__item:hover .social-links__icon {
+  transition: 0.3s;
+  fill: $green;
+}
 
-  &__icon:active {
-    transition: 0.3s;
-    fill: $green-active;
-  }
+.social-links__item:active .social-links__icon {
+  transition: 0.3s;
+  fill: $green-active;
 }
 
 .social-links a {
@@ -104,6 +104,7 @@
   }
 
   .social-links {
+    align-items: flex-start;
     box-sizing: border-box;
     margin: 0;
     padding: 22px 0 0 20px;
